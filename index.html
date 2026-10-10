@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panco · diagnóstico e oportunidades de trade marketing · 75 LAB</title>
+<meta name="description" content="Em dezembro, todo mundo procura a Panco. Na loja, ela precisa ser encontrada. Diagnóstico e oportunidades de trade marketing, outubro de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#D80000;--red2:#F43D3D;--yel:#FBD72D;--cream:#F2F1D3;--navy:#20306A;--blue:#1C8CD6;--ink:#161B33;--hd:'Alegreya Sans','Open Sans',sans-serif;--bd:'Open Sans','Helvetica Neue',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#141a3a;overflow:hidden;font-family:var(--bd);color:var(--navy);-webkit-font-smoothing:antialiased}
+body.mob{overflow:auto;background:var(--cream)}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;transform-origin:center center;overflow:hidden;background:var(--cream)}
+.s{position:absolute;inset:0;visibility:hidden;opacity:0;overflow:hidden}
+.s.on{visibility:visible;opacity:1;z-index:3}
+.s.out{visibility:visible;opacity:1;z-index:2}
+.cream{background:var(--cream);color:var(--navy)}
+.red{background:var(--red);color:#fff}
+.navy{background:var(--navy);color:#fff}
+.yel{background:var(--yel);color:var(--navy)}
+.s.on[data-tr=zoom]{animation:trZoom 1s cubic-bezier(.2,.7,.2,1)}
+.s.on[data-tr=wipe]{animation:trWipe .95s cubic-bezier(.7,0,.2,1)}
+.s.on[data-tr=up]{animation:trUp .9s cubic-bezier(.2,.7,.2,1)}
+.s.on[data-tr=slide]{animation:trSlide .9s cubic-bezier(.2,.7,.2,1)}
+@keyframes trZoom{from{opacity:0;transform:scale(1.12);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+@keyframes trWipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+@keyframes trUp{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes trSlide{from{opacity:0;transform:translateX(120px)}to{opacity:1;transform:none}}
+.in{position:absolute;inset:0;padding:130px 90px 100px;display:flex;flex-direction:column;z-index:2}
+.bgd{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
+.bgd i{position:absolute;border-radius:50%;opacity:.13;animation:fl 14s ease-in-out infinite alternate}
+.cream .bgd i:nth-child(odd){background:var(--red2)}.cream .bgd i:nth-child(even){background:var(--yel)}
+.red .bgd i,.navy .bgd i{background:#fff;opacity:.07}.yel .bgd i{background:var(--red2);opacity:.12}
+@keyframes fl{from{transform:translate(0,0)}to{transform:translate(30px,-40px)}}
+.k{font:700 17px var(--bd);letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.k:before{content:"";width:14px;height:14px;border-radius:50%;background:var(--red2)}
+.red .k:before,.navy .k:before{background:var(--yel)}
+.t{font:800 62px/1.02 var(--hd);letter-spacing:-.5px;max-width:1280px}
+.t em{font-style:normal;color:var(--red)}.red .t em,.navy .t em{color:var(--yel)}.yel .t em{color:var(--red)}
+.sub{font:400 26px/1.35 var(--bd);margin-top:18px;max-width:900px;opacity:.95}
+.src{position:absolute;left:90px;bottom:48px;font:400 16px/1.3 var(--bd);max-width:1120px;opacity:.85;z-index:5}
+.big{font:900 220px/.9 var(--hd);letter-spacing:-4px}
+.hl{background:linear-gradient(transparent 62%,var(--yel) 62%);padding:0 4px}
+.g{display:grid;gap:30px;align-items:center}
+.zoom,[data-zoom]{cursor:zoom-in}
+.pill{display:inline-block;font:700 15px var(--bd);letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:99px;border:2px solid currentColor}
+.hy{font:700 14px var(--bd);letter-spacing:.08em;text-transform:uppercase;background:var(--yel);color:var(--navy);padding:4px 10px;border-radius:6px}
+/* animations */
+.a{opacity:0}
+.on .a{animation:aIn .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+.on .a.l{animation-name:aInL}.on .a.r{animation-name:aInR}.on .a.z{animation-name:aInZ}.on .a.f{animation-name:aInF}
+@keyframes aIn{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes aInL{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:none}}
+@keyframes aInR{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:none}}
+@keyframes aInZ{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+@keyframes aInF{from{opacity:0}to{opacity:1}}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;--to:0}
+.on .draw{animation:drw 1.5s ease both;animation-delay:var(--d,0s)}
+@keyframes drw{from{stroke-dashoffset:1}to{stroke-dashoffset:var(--to)}}
+.bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0)}
+.barn{transform-box:fill-box;transform-origin:top;transform:scaleY(0)}
+.barx{transform-box:fill-box;transform-origin:left;transform:scaleX(0)}
+.pop{transform-box:fill-box;transform-origin:center;transform:scale(0);opacity:0}
+.on .bar,.on .barn{animation:gy 1s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+.on .barx{animation:gx 1.1s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+.on .pop{animation:pp .7s cubic-bezier(.3,1.5,.5,1) both;animation-delay:var(--d,0s)}
+@keyframes gy{to{transform:scaleY(1)}}@keyframes gx{to{transform:scaleX(1)}}@keyframes pp{to{transform:scale(1);opacity:1}}
+.s.out .a{opacity:1;animation:none}.s.out .draw{stroke-dashoffset:var(--to);animation:none}
+.s.out .bar,.s.out .barn{transform:none;animation:none}.s.out .barx{transform:none;animation:none}.s.out .pop{transform:none;opacity:1;animation:none}
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.w>span{display:inline-block;transform:translateY(105%)}
+.on .w>span{animation:kin .85s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.07s + var(--d,0s))}
+@keyframes kin{to{transform:none}}
+.s.out .w>span{transform:none;animation:none}
+.ty span{opacity:0}.on .ty span{animation:aInF .01s both;animation-delay:calc(var(--i)*.045s + .4s)}.s.out .ty span{opacity:1;animation:none}
+/* icons */
+.ic{width:56px;height:56px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.ic *{transform-box:fill-box;transform-origin:center}
+.ic .ring{animation:ringp 2.4s ease-out infinite}@keyframes ringp{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+.ic .blink{animation:bl 2s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.ic .hand{animation:spin 6s linear infinite;transform-origin:24px 24px;transform-box:view-box}@keyframes spin{to{transform:rotate(360deg)}}
+.ic .tick{stroke-dasharray:30;animation:tk 2.8s ease-in-out infinite}@keyframes tk{0%{stroke-dashoffset:30}40%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:30}}
+.ic .b1,.ic .b2,.ic .b3{transform-origin:bottom;animation:bg 2.4s ease-in-out infinite alternate}.ic .b2{animation-delay:.3s}.ic .b3{animation-delay:.6s}
+@keyframes bg{from{transform:scaleY(.45)}to{transform:scaleY(1)}}
+.ic .w1{animation:wv 2s ease-in-out infinite}.ic .w2{animation:wv 2s ease-in-out .35s infinite}@keyframes wv{0%,100%{opacity:.25}50%{opacity:1}}
+.ic .dot{animation:dd 1.8s ease-in infinite}@keyframes dd{0%{transform:translateY(-6px);opacity:0}40%{opacity:1}100%{transform:translateY(22px);opacity:0}}
+.ic .mv{animation:mvx 3s ease-in-out infinite alternate}@keyframes mvx{to{transform:translateX(5px)}}
+.ic .st{animation:stm 2.4s ease-in-out infinite}@keyframes stm{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-4px);opacity:1}}
+.ic .pu{animation:pu 2.2s ease-in-out infinite}@keyframes pu{50%{transform:scale(1.1)}}
+.ic .dayd{animation:bl 1.6s steps(1) infinite}
+.ic .sc{animation:sc 3s ease-in-out infinite}@keyframes sc{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,3px)}}
+/* header e navegação */
+#hd{position:absolute;left:0;right:0;top:0;height:112px;padding:48px 90px 0;display:flex;align-items:flex-start;justify-content:space-between;z-index:30;pointer-events:none}
+#hd>*{pointer-events:auto}
+#hd .lp{height:54px;width:auto}
+#hd .r{display:flex;align-items:center;gap:26px;margin-top:8px}
+#hd .l75{height:30px;width:auto}
+.l75w{display:none}.th-red .l75b,.th-navy .l75b{display:none}.th-red .l75w,.th-navy .l75w{display:block}
+#chb{font:700 15px var(--bd);letter-spacing:.14em;text-transform:uppercase;border:2px solid currentColor;border-radius:99px;padding:8px 16px}
+.th-red #hd,.th-navy #hd{color:#fff}.th-cream #hd,.th-yel #hd{color:var(--navy)}
+#pg{position:absolute;left:0;bottom:0;height:7px;background:var(--red2);width:0;transition:width .8s cubic-bezier(.2,.7,.2,1);z-index:31}
+.th-red #pg{background:var(--yel)}
+#nv{position:absolute;right:90px;bottom:48px;display:flex;align-items:center;gap:14px;z-index:31;font:700 17px var(--bd);letter-spacing:.1em}
+#nv button{width:42px;height:42px;border-radius:50%;border:2px solid currentColor;font-size:20px;line-height:1}
+.th-red #nv,.th-navy #nv{color:#fff}.th-cream #nv,.th-yel #nv{color:var(--navy)}
+#chp{position:absolute;top:0;right:0;bottom:0;width:420px;background:var(--ink);color:#fff;z-index:60;transform:translateX(105%);transition:transform .5s cubic-bezier(.2,.7,.2,1);padding:100px 40px 40px;overflow:auto}
+#chp.open{transform:none}
+#chp h3{font:800 28px var(--hd);margin-bottom:18px}
+#chp button{display:flex;gap:16px;width:100%;text-align:left;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.2);font:600 20px var(--bd)}
+#chp button b{color:var(--yel);min-width:42px}
+#chp button:hover,#chp button:focus-visible{color:var(--yel)}
+/* cursor */
+#cr,#cd{position:fixed;left:0;top:0;pointer-events:none;z-index:200;display:none}
+body.hc #cr,body.hc #cd{display:block}
+body.hc,body.hc *{cursor:none!important}
+#cr{width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;border:3px solid var(--red);box-shadow:0 0 0 2px #fff,inset 0 0 0 2px #fff;transition:width .25s,height .25s,margin .25s,background .25s;display:none;align-items:center;justify-content:center}
+body.hc #cr{display:flex}
+#cr span{font:800 13px var(--bd);letter-spacing:.12em;color:var(--navy);opacity:0;transition:opacity .2s}
+#cr.big{width:96px;height:96px;margin:-48px 0 0 -48px;background:rgba(255,255,255,.94)}#cr.big span{opacity:1}
+#cr.hov{width:60px;height:60px;margin:-30px 0 0 -30px;background:rgba(251,215,45,.5)}
+#cd{width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 2px #fff}
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:100;background:rgba(10,12,28,.92);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;flex-direction:column;padding:40px}
+#lb.open{opacity:1;visibility:visible}
+#lbc{max-width:92vw;max-height:80vh;transform:scale(.92);transition:transform .45s cubic-bezier(.2,.7,.2,1);display:flex}
+#lb.open #lbc{transform:none}
+#lbc img{max-width:92vw;max-height:80vh;object-fit:contain;border-radius:8px}
+#lbc .zs{background:var(--cream);padding:20px;border-radius:12px;width:min(92vw,1500px)}
+#lbc svg{width:100%;height:auto;max-height:76vh}
+#lbt{color:#fff;font:600 20px var(--bd);margin-top:18px;text-align:center;max-width:1100px}
+#lb button{position:absolute;color:#fff;font-size:40px;width:60px;height:60px;border-radius:50%;border:2px solid #fff}
+#lbx{top:24px;right:28px}#lbp{left:28px;top:50%}#lbn{right:28px;top:50%}
+/* flip */
+.flip{perspective:1200px;height:100%;min-height:290px}
+.fi{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.flip:hover .fi,.flip.f .fi,.flip:focus-visible .fi{transform:rotateY(180deg)}
+.fc{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between}
+.fc.fr{background:var(--red);color:#fff}.fc.bk{background:var(--cream);color:var(--navy);transform:rotateY(180deg)}
+.fc h4{font:800 32px/1.05 var(--hd)}.fc p{font:400 23px/1.3 var(--bd)}.fc small{font:700 15px var(--bd);letter-spacing:.14em;text-transform:uppercase}
+/* misc blocks */
+.nd{flex:1;min-width:0}
+.nd small{display:block;font:700 15px var(--bd);letter-spacing:.14em;text-transform:uppercase;color:var(--yel);margin-bottom:8px}
+.nd b{display:block;font:800 44px/1 var(--hd);margin-bottom:8px}
+.nd p{font:400 22px/1.3 var(--bd)}
+.arr{width:50px;height:40px;flex:none;align-self:center}
+.chip{display:flex;gap:16px;align-items:flex-start;font:400 21px/1.3 var(--bd)}
+.chip b{display:block;font:800 25px var(--hd);color:var(--yel)}
+.curtain{position:absolute;top:0;bottom:0;width:50.5%;background:var(--red);z-index:4;transition:none}
+.cl{left:0}.cr2{right:0}
+.on .cl{animation:cutL 1.8s .5s cubic-bezier(.7,0,.2,1) both}.on .cr2{animation:cutR 1.8s .5s cubic-bezier(.7,0,.2,1) both}
+@keyframes cutL{to{transform:translateX(-101%)}}@keyframes cutR{to{transform:translateX(101%)}}
+.s.out .curtain{transform:translateX(-101%)}.s.out .cr2{transform:translateX(101%)}
+.tag{position:absolute;z-index:6;background:#fff;color:var(--navy);font:700 21px var(--bd);padding:10px 16px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.tag:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--red);left:-6px;top:-6px;animation:ringp 2s infinite}
+.odo{display:inline-flex;font:900 200px/1 var(--hd);height:1em;overflow:hidden}
+.odo .dg{display:inline-block;height:1em;overflow:hidden}
+.odo .st2{display:block;line-height:1;transform:translateY(0)}
+.on .odo .st2{animation:odo 1.8s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--j)*.12s + .3s)}
+@keyframes odo{from{transform:translateY(0)}to{transform:translateY(calc(var(--n)*-1em))}}
+.s.out .odo .st2{transform:translateY(calc(var(--n)*-1em));animation:none}
+.stage-note{font:700 15px var(--bd);letter-spacing:.1em;text-transform:uppercase}
+.kvimg{position:relative;overflow:hidden}
+.kvimg img{width:100%;height:100%;object-fit:cover}
+@keyframes pan{from{transform:scale(1.08) translateX(0)}to{transform:scale(1.18) translateX(-2.5%)}}
+.pan img{animation:pan 22s ease-in-out infinite alternate}
+@keyframes zout{from{transform:scale(1.7);transform-origin:36% 18%}to{transform:scale(1);transform-origin:36% 18%}}
+.on .zo img{animation:zout 3.2s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important;transition-duration:.01s!important}.a,.pop{opacity:1}.bar,.barn,.barx{transform:none}.draw{stroke-dashoffset:var(--to)}.w>span{transform:none}.ty span{opacity:1}}
+/* mobile */
+body.mob #stage{position:static;width:auto;height:auto;transform:none!important;overflow:visible}
+body.mob .s{position:relative;visibility:visible!important;opacity:1!important;overflow:hidden;animation:none!important;clip-path:none!important}
+body.mob .in{position:relative;padding:96px 20px 56px}
+body.mob .a,body.mob .pop{opacity:1!important;animation:none!important;transform:none!important}
+body.mob .draw{stroke-dashoffset:var(--to)!important;animation:none!important}
+body.mob .bar,body.mob .barn,body.mob .barx{transform:none!important;animation:none!important}
+body.mob .w>span{transform:none!important;animation:none!important}
+body.mob .ty span{opacity:1!important;animation:none!important}
+body.mob .odo .st2{transform:translateY(calc(var(--n)*-1em))!important;animation:none!important}
+body.mob #hd{position:fixed;height:62px;padding:0 16px;background:#fff;color:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.15)}
+body.mob #hd .lp{height:44px}body.mob #hd .l75{height:22px}body.mob .l75w{display:none!important}body.mob .l75b{display:block!important}
+body.mob #chb{padding:6px 10px;font-size:12px}body.mob #hd .r{gap:12px}
+body.mob #nv{display:none}body.mob #pg{position:fixed;top:62px;bottom:auto;height:4px}
+body.mob #chp{position:fixed;width:86vw}
+body.mob .t{font-size:34px;max-width:100%}body.mob .sub{font-size:19px}
+body.mob .big{font-size:96px}body.mob .odo{font-size:96px}
+body.mob .g{grid-template-columns:1fr!important;gap:18px}
+body.mob .src{position:relative;left:auto;bottom:auto;margin-top:22px;font-size:14px}
+body.mob .row{flex-direction:column!important}body.mob .arr{transform:rotate(90deg);margin:4px 0}
+body.mob .abs{position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;width:auto!important;height:auto!important}
+body.mob svg.fs{width:100%;height:auto}
+body.mob .flip{min-height:200px}body.mob .fc h4{font-size:26px}
+body.mob .kvimg{height:300px!important;position:relative!important}
+body.mob .curtain{display:none}
+body.mob .tag{position:relative;display:inline-block;margin:6px 6px 0 0}
+body.mob .hide-m{display:none!important}
+.red .src,.navy .src{opacity:1}
+body.mob .nd b{font-size:34px}
+</style>
+</head>
+<body class="th-cream">
+<div id="cr"><span>EXPANDIR</span></div><div id="cd"></div>
+<div id="stage">
+<header id="hd">
+ <img class="lp" src="assets/01-oficina-1791670044931-panco-logo-site-206x161.png" alt="Logo Panco" width="85" height="66">
+ <div class="r">
+  <img class="l75 l75b" src="assets/02-logo-preto.svg" alt="Logo 75 LAB">
+  <img class="l75 l75w" src="assets/03-logo-branco.svg" alt="Logo 75 LAB">
+  <button id="chb" class="mag" aria-label="Abrir capítulos" aria-expanded="false">Capítulos</button>
+ </div>
+</header>
+<aside id="chp" aria-label="Capítulos"><h3>Capítulos</h3><div id="chl"></div></aside>
+<div id="pg"></div>
+<div id="nv"><button id="pv" class="mag" aria-label="Tela anterior">‹</button><span id="ct">01 / 29</span><button id="nx" class="mag" aria-label="Próxima tela">›</button></div>
+
+<!-- 1 ABERTURA -->
+<section class="s slide red" data-th="red" data-tr="zoom" data-ch="Abertura" aria-label="Abertura">
+ <div class="bgd"><i style="width:220px;height:220px;left:6%;top:60%"></i><i style="width:120px;height:120px;left:40%;top:12%"></i></div>
+ <div class="kvimg pan abs" style="position:absolute;right:0;top:0;bottom:0;width:850px;clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)">
+  <img data-zoom data-g="kv" data-cap="Key visual: ilha calendário com as embalagens reais da Panco (cena criada por IA)" src="assets/04-47923-kv3b-ilha-calendario-embalagens-reais-ref-1600x900.jpg" alt="Ilha de supermercado com bisnaguinhas Panco de um lado e panetones Panco do outro, com árvore de Natal">
+ </div>
+ <div class="in" style="justify-content:center;padding-right:900px">
+  <div class="k a" style="--d:.2s">Diagnóstico e oportunidades de trade · outubro de 2026</div>
+  <h1 class="t" data-kin style="font-size:62px;max-width:640px">Em dezembro, todo mundo procura a Panco. Na loja, ela precisa ser encontrada.</h1>
+  <div class="a" style="--d:1.6s;margin-top:34px;display:flex;align-items:baseline;gap:20px">
+   <span class="cu" data-to="62" style="font:900 120px/1 var(--hd);color:var(--yel)">62</span>
+   <span style="font:600 21px/1.3 var(--bd);max-width:300px">pico de busca por Panco em 14/12/2025 (índice Google Trends, não é venda)</span>
+  </div>
+  <p class="a" style="--d:2s;margin-top:26px;font:600 20px var(--bd)">Apresentação: Caique Becker, cofundador e Head de Trade da 75 LAB</p>
+ </div>
+ <p class="src" style="left:90px;max-width:640px">Fonte: Google Trends, consulta de 10/10/2026. Imagem criada por IA a partir das embalagens reais; rótulos recriados, não são arte final.</p>
+</section>
+
+<!-- 2 AGENDA -->
+<section class="s slide cream" data-th="cream" data-tr="wipe" data-ch="Abertura" aria-label="Agenda">
+ <div class="bgd"><i style="width:260px;height:260px;right:4%;top:55%"></i><i style="width:90px;height:90px;left:30%;top:20%"></i></div>
+ <div class="in">
+  <div class="k a">O que vamos discutir hoje</div>
+  <h2 class="t" data-kin>Uma história em 5 passos: da gôndola concentrada ao Natal medido loja a loja.</h2>
+  <svg class="fs" viewBox="0 0 1420 400" style="width:1420px;margin-top:30px" role="img" aria-label="Trilha de 5 paradas: leitura, mercado, shopper, caminho e prova">
+   <path class="draw" pathLength="1" style="--d:.5s" d="M30 250 C 200 250 220 120 330 120 S 480 250 620 250 S 760 120 900 120 S 1040 250 1180 250 S 1300 150 1360 150" fill="none" stroke="#D80000" stroke-width="6" stroke-dasharray="1" stroke-linecap="round"/>
+   <g class="stops"></g>
+  </svg>
+ </div>
+ <p class="src">Clique numa parada para ir ao capítulo.</p>
+</section>
+
+<!-- 3 LEITURA DO DESAFIO -->
+<section class="s slide navy" data-th="navy" data-tr="slide" data-ch="Leitura do desafio" aria-label="Leitura do desafio">
+ <div class="bgd"><i style="width:300px;height:300px;right:-40px;top:-60px"></i><i style="width:140px;height:140px;left:45%;top:70%"></i></div>
+ <div class="in" style="padding-top:120px">
+  <div class="k a">Leitura do desafio</div>
+  <h2 class="t" data-kin style="font-size:54px">O problema não é falta de material. É a Panco espalhada numa gôndola que ficou de um dono só.</h2>
+  <div class="row" style="display:flex;margin-top:34px;gap:0">
+   <div class="nd a" style="--d:.6s"><small>1 · Problema aparente</small><b>Mais peças</b><p>“Precisamos de mais material de PDV.”</p></div>
+   <svg class="arr" viewBox="0 0 50 40"><path class="draw" pathLength="1" style="--d:.9s" d="M4 20h38M32 9l11 11-11 11" fill="none" stroke="#FBD72D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   <div class="nd a" style="--d:1s"><small>2 · Problema real</small><b>Falta sistema</b><p>Ocasião e calendário, não só peça.</p></div>
+   <svg class="arr" viewBox="0 0 50 40"><path class="draw" pathLength="1" style="--d:1.3s" d="M4 20h38M32 9l11 11-11 11" fill="none" stroke="#FBD72D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   <div class="nd a" style="--d:1.4s"><small>3 · Tensão</small><b>Procurada, não achada</b><p>Pico de busca no Natal, ponta sem calendário.</p></div>
+   <svg class="arr" viewBox="0 0 50 40"><path class="draw" pathLength="1" style="--d:1.7s" d="M4 20h38M32 9l11 11-11 11" fill="none" stroke="#FBD72D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   <div class="nd a" style="--d:1.8s"><small>4 · Oportunidade</small><b>Ocasião, porção, calendário</b><p>O mesmo sistema contando a história de cada época.</p></div>
+   <svg class="arr" viewBox="0 0 50 40"><path class="draw" pathLength="1" style="--d:2.1s" d="M4 20h38M32 9l11 11-11 11" fill="none" stroke="#FBD72D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   <div class="nd a" style="--d:2.2s"><small>5 · Critério de sucesso</small><b>Vender e executar</b><p>Mais vendas que lojas de controle, ponta montada no prazo.</p></div>
+  </div>
+  <div class="g" style="grid-template-columns:repeat(4,1fr);margin-top:44px;gap:34px;border-top:2px solid rgba(255,255,255,.25);padding-top:30px">
+   <div class="chip a" style="--d:2.5s"><i data-ic="clock"></i><div><b>Operacional</b>Montar e manter a ponta no prazo</div></div>
+   <div class="chip a" style="--d:2.6s"><i data-ic="store"></i><div><b>Comercial</b>Convencer o comprador regional do metro extra</div></div>
+   <div class="chip a" style="--d:2.7s"><i data-ic="cart"></i><div><b>Shopper</b>Achar a ocasião em segundos</div></div>
+   <div class="chip a" style="--d:2.8s"><i data-ic="target"></i><div><b>Marca</b>Um sistema visual único, vermelho Panco</div></div>
+  </div>
+  <p class="a" style="--d:3s;margin-top:22px;font:600 19px var(--bd)">Condicionantes: prazo do Natal e preço Panco não confirmado. Riscos: produção atrasar e preço por quilo não competitivo.</p>
+ </div>
+ <p class="src">Síntese 75 LAB; pedido da cliente de 14/09 (sistema visual único, comunicação trocável).</p>
+</section>
+
+<!-- 4 CONTEXTO -->
+<section class="s slide cream" data-th="cream" data-tr="zoom" data-ch="Contexto" aria-label="Contexto de mercado">
+ <div class="bgd"><i style="width:520px;height:520px;right:-120px;top:110px"></i></div>
+ <div class="in" style="justify-content:center">
+  <div class="k a">Contexto · mercado</div>
+  <div class="g" style="grid-template-columns:1.25fr .75fr">
+   <div>
+    <div class="big cu" data-to="16.5" data-dec="1" data-pre="R$ " data-suf=" bi" style="color:var(--red)">R$ 16,5 bi</div>
+    <h2 class="t a" style="--d:.5s;margin-top:20px;font-size:54px">A categoria é grande e segue pesando na mesa.</h2>
+    <p class="sub a" style="--d:.8s">O pão industrializado cresceu 6% em valor em 2025.</p>
+   </div>
+   <div class="a z" style="--d:.4s;justify-self:center"><svg class="ic" style="width:300px;height:300px;color:var(--navy);stroke-width:1.6" viewBox="0 0 48 48"><g class="pu"><path d="M8 22a9 9 0 019-9h14a9 9 0 019 9v2a3 3 0 01-3 3v12a3 3 0 01-3 3H14a3 3 0 01-3-3V27a3 3 0 01-3-3z"/><path d="M18 20v3M24 20v3M30 20v3"/></g></svg></div>
+  </div>
+ </div>
+ <p class="src">Fonte: Abimapi via Mercado &amp; Consumo, 16/02/2026 (consulta 10/10/2026).</p>
+</section>
+
+<!-- 5 CONTEXTO: valor x volume -->
+<section class="s slide cream" data-th="cream" data-tr="slide" data-ch="Contexto" aria-label="Valor e volume">
+ <div class="in">
+  <div class="k a">Contexto · consumo</div>
+  <h2 class="t" data-kin>O shopper paga mais e leva menos: o pão e o panetone repetem o movimento.</h2>
+  <p class="sub a" style="--d:.4s">Pão no 1º semestre de 2026: valor sobe 1,1%, volume cai 3,9%. Panetone 2025/26: valor sobe 3,5%, volume cai 3,4%.</p>
+  <div id="ch5" class="zsvg" data-zoom data-g="gr" data-cap="Valor x volume: pão (1º sem. 2026) e panetone (2025/26)" style="margin-top:6px"></div>
+ </div>
+ <p class="src">Fontes: Abimapi/NielsenIQ via Mercado &amp; Consumo, 25/08/2026; Worldpanel by Numerator para Abimapi via SuperVarejo, 27/08/2026.</p>
+</section>
+
+<!-- 6 TENSÃO 60% -->
+<section class="s slide navy" data-th="navy" data-tr="wipe" data-ch="Tensão" aria-label="Concentração da Bimbo">
+ <div class="bgd"><i style="width:200px;height:200px;left:3%;top:68%"></i></div>
+ <div class="in">
+  <div class="k a">Tensão · concorrência</div>
+  <h2 class="t" data-kin>Um só dono tem 60% do pão de forma no Sudeste.</h2>
+  <div class="g" style="grid-template-columns:.8fr 1.2fr;margin-top:6px">
+   <div style="position:relative;justify-self:center">
+    <svg viewBox="0 0 400 400" style="width:400px" role="img" aria-label="Anel mostrando 60%">
+     <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="34"/>
+     <circle class="draw" pathLength="1" style="--d:.5s;--to:.4" cx="200" cy="200" r="170" fill="none" stroke="#FBD72D" stroke-width="34" stroke-linecap="round" transform="rotate(-90 200 200)"/>
+    </svg>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center"><span class="cu" data-to="60" data-suf="%" style="font:900 130px/1 var(--hd);color:#fff">60%</span><span style="font:600 20px var(--bd)">do pão de forma</span></div>
+   </div>
+   <svg class="fs" id="const" viewBox="0 0 760 460" style="width:760px" role="img" aria-label="Marcas da Bimbo ligadas, e a Panco isolada"></svg>
+  </div>
+  <p class="sub a" style="--d:1s;margin-top:0">A Bimbo comprou a Wickbold e a Seven Boys e soma Pullman, Plusvita e Ana Maria.</p>
+ </div>
+ <p class="src">Fonte: relatora do caso no Cade, via InvestNews, 17/09/2025. Estimativa do Cade, não é dado de loja.</p>
+</section>
+
+<!-- 7 CONCORRÊNCIA -->
+<section class="s slide cream" data-th="cream" data-tr="zoom" data-ch="Tensão" aria-label="Mapa de concorrentes">
+ <div class="in" style="padding-top:118px">
+  <div class="k a">Concorrência · mapa de posicionamento</div>
+  <h2 class="t" data-kin style="font-size:52px;max-width:1380px">A Panco cobre mais ocasiões que qualquer rival. Ninguém junta pão do dia a dia e Natal como ela.</h2>
+  <div id="ch7" class="zsvg" data-zoom data-g="gr" data-cap="Mapa de concorrentes: preço da bisnaguinha x ocasiões cobertas" style="margin-top:4px"></div>
+ </div>
+ <p class="src">Fontes: Americanas online, 10/10/2026 18h52 (R$/kg da bisnaguinha); portfólio público das marcas (ocasiões cobertas: contagem 75 LAB). Seven Boys: preço sugerido, matéria não aberta (tracejado). Marcas próprias: Hipótese.</p>
+</section>
+
+<!-- 8 MARCA PRÓPRIA -->
+<section class="s slide red" data-th="red" data-tr="up" data-ch="Tensão" aria-label="Marca própria">
+ <div class="bgd"><i style="width:340px;height:340px;right:6%;top:6%"></i></div>
+ <div class="in">
+  <div class="k a">Tensão · marca própria</div>
+  <h2 class="t" data-kin style="max-width:1200px">A marca própria cresce nas grandes redes. No supermercado regional, a marca ainda manda.</h2>
+  <div class="g" style="grid-template-columns:.9fr 1.1fr 1fr;margin-top:10px">
+   <div><div class="big cu" data-to="65" data-suf="%" style="font-size:190px;color:var(--yel)">65%</div><p class="sub" style="margin-top:6px;font-size:24px">da marca própria está nos 10 maiores varejistas</p></div>
+   <svg class="fs" viewBox="0 0 560 420" style="width:560px" role="img" aria-label="Bolhas: 10 maiores redes concentram 65%; regional é o terreno da Panco (Hipótese)">
+    <circle class="pop" style="--d:.5s" cx="190" cy="210" r="170" fill="#fff"/>
+    <text x="190" y="205" text-anchor="middle" font-family="Alegreya Sans" font-weight="900" font-size="52" fill="#D80000">10 maiores</text>
+    <text x="190" y="245" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="22" fill="#20306A">redes: 65%</text>
+    <circle class="pop" style="--d:1s" cx="460" cy="260" r="80" fill="#FBD72D"/>
+    <text x="460" y="256" text-anchor="middle" font-family="Alegreya Sans" font-weight="900" font-size="32" fill="#20306A">Regional</text>
+    <text x="460" y="284" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="19" fill="#20306A">terreno Panco</text>
+    <path class="draw" pathLength="1" style="--d:1.5s" d="M340 130 C 420 90 500 120 505 170" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <path class="draw" pathLength="1" style="--d:2s" d="M493 160l12 14 12-14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+   </svg>
+   <div><div class="big cu" data-to="3.8" data-dec="1" data-suf="x" style="font-size:150px">3,8x</div><p class="sub" style="margin-top:6px;font-size:24px">é quanto a marca própria cresce mais que a indústria (mercado geral)</p><p style="margin-top:14px"><span class="hy">Hipótese: regional pesa menos</span></p></div>
+  </div>
+ </div>
+ <p class="src">Fontes: NielsenIQ via Mercado &amp; Consumo, 21/08/2026; NielsenIQ/Abmapro via Diário do Comércio. Regional como terreno da Panco: Hipótese 75 LAB.</p>
+</section>
+
+<!-- 9 SHOPPER -->
+<section class="s slide cream" data-th="cream" data-tr="slide" data-ch="Shopper e tendências" aria-label="Jornada do shopper">
+ <div class="bgd"><i style="width:180px;height:180px;right:8%;top:8%"></i></div>
+ <div class="kvimg abs" style="position:absolute;left:0;top:0;bottom:0;width:430px;z-index:1">
+  <img data-zoom data-g="kv" data-cap="Café da manhã: bisnaguinha à vista (cena criada por IA)" src="assets/05-oficina-1791670049441-kv2-cafe-da-manha-1600x900.jpg" alt="Gôndola de supermercado com bisnaguinhas Panco em primeiro plano" loading="lazy">
+  <div style="position:absolute;left:0;right:0;bottom:0;background:var(--red);color:#fff;padding:20px 28px"><span class="cu" data-to="72" data-suf="%" style="font:900 80px/1 var(--hd);color:var(--yel)">72%</span><div style="font:600 20px/1.25 var(--bd)">das ocasiões de panetone são no café da manhã</div></div>
+ </div>
+ <div class="in" style="padding-left:500px;padding-top:122px">
+  <div class="k a">Shopper · jornada</div>
+  <h2 class="t" data-kin style="font-size:50px">O shopper não compra pão. Compra o café da manhã, o lanche e o Natal.</h2>
+  <div id="jr" style="margin-top:22px"></div>
+ </div>
+ <p class="src" style="left:500px">Fontes: SuperVarejo, 11/09/2025 (período nov/24 a jan/25); diagnóstico 75 LAB. Missões e barreiras: Hipótese de leitura.</p>
+</section>
+
+<!-- 10 CONSUMIDOR -->
+<section class="s slide yel" data-th="yel" data-tr="zoom" data-ch="Shopper e tendências" aria-label="Porção">
+ <div class="bgd"><i style="width:420px;height:420px;left:-100px;top:-120px"></i><i style="width:160px;height:160px;right:5%;bottom:10%"></i></div>
+ <div class="in">
+  <div class="k a">Consumidor · porção</div>
+  <h2 class="t" data-kin>O que cresce é a porção: o pequeno vende mais que o grande.</h2>
+  <div class="g" style="grid-template-columns:1fr 1fr;margin-top:30px;gap:60px">
+   <div class="a" style="--d:.6s;border-top:8px solid var(--red);padding-top:18px">
+    <div style="display:flex;align-items:center;gap:20px"><i data-ic="slice" data-s="110"></i><span class="big cu" data-to="4.2" data-dec="1" data-pre="+" data-suf="%" style="font-size:190px;color:var(--red)">+4,2%</span></div>
+    <p class="sub" style="font-size:28px;margin-top:8px">de participação para o bolo de 40 g</p>
+   </div>
+   <div class="a" style="--d:1s;border-top:8px solid var(--navy);padding-top:18px">
+    <div style="display:flex;align-items:center;gap:20px"><i data-ic="lupa" data-s="110"></i><span class="big cu" data-to="41" data-pre="+" data-suf="%" style="font-size:190px">+41%</span></div>
+    <p class="sub" style="font-size:28px;margin-top:8px">de busca por “bolo pronto” em 12 meses</p>
+   </div>
+  </div>
+  <p class="sub a" style="--d:1.5s;margin-top:34px;font-size:24px">Busca não é venda: é sinal de interesse.</p>
+ </div>
+ <p class="src">Fontes: Abimapi/NielsenIQ, 1º semestre de 2026; Google Trends, consulta de 10/10/2026 (índice de busca).</p>
+</section>
+
+<!-- 11 TENDÊNCIAS -->
+<section class="s slide navy" data-th="navy" data-tr="up" data-ch="Shopper e tendências" aria-label="Tendências">
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Tendências · o que muda para a Panco</div>
+  <h2 class="t" data-kin style="font-size:50px">Seis tendências, uma direção: vender porção, ocasião e prova, não quilo.</h2>
+  <div class="g" style="grid-template-columns:repeat(3,1fr);grid-auto-rows:236px;margin-top:26px;gap:22px">
+   <div class="a" style="--d:.5s"><div class="flip" tabindex="0"><div class="fi"><div class="fc fr"><small>T1 · valor</small><h4>Valor no lugar de volume</h4><i data-ic="chart" data-s="48"></i></div><div class="fc bk"><small>O que muda</small><p>Disputar preço por quilo é perder margem: vender porção e sabor (mini 80 g, recheado).</p></div></div></div></div>
+   <div class="a" style="--d:.65s"><div class="flip" tabindex="0"><div class="fi"><div class="fc fr"><small>T2 · calendário</small><h4>O Natal começa no café da manhã</h4><i data-ic="cup" data-s="48"></i></div><div class="fc bk"><small>O que muda</small><p>A Ponta de Natal Panco pode falar com o café da manhã de dezembro, perto do pão.</p></div></div></div></div>
+   <div class="a" style="--d:.8s"><div class="flip" tabindex="0"><div class="fi"><div class="fc fr"><small>T3 · porção</small><h4>Minis e recheados puxam o Natal</h4><i data-ic="slice" data-s="48"></i></div><div class="fc bk"><small>O que muda</small><p>Confirma a dupla: 550 g para a mesa, mini 80 g para o impulso. Diferenciar por sabor (Hipótese).</p></div></div></div></div>
+   <div class="a" style="--d:.95s"><div class="flip" tabindex="0"><div class="fi"><div class="fc fr"><small>T4 · varejo</small><h4>Marca própria nas grandes redes</h4><i data-ic="store" data-s="48"></i></div><div class="fc bk"><small>O que muda</small><p>No regional ela pesa menos (Hipótese): é onde a Panco vira referência.</p></div></div></div></div>
+   <div class="a" style="--d:1.1s"><div class="flip" tabindex="0"><div class="fi"><div class="fc fr"><small>T5 · mídia</small><h4>Retail media virou verba de trade</h4><i data-ic="phone" data-s="48"></i></div><div class="fc bk"><small>O que muda</small><p>A peça física pode ganhar camada paga (app, encarte digital, tela da rede), a conferir rede a rede.</p></div></div></div></div>
+   <div class="a" style="--d:1.25s"><div class="flip" tabindex="0"><div class="fi"><div class="fc fr"><small>T6 · dados</small><h4>PDV que se prova com dado</h4><i data-ic="data" data-s="48"></i></div><div class="fc bk"><small>O que muda</small><p>Cada metro extra tem de mostrar resultado: foto, prazo de montagem e sell-out por loja.</p></div></div></div></div>
+  </div>
+ </div>
+ <p class="src">Passe o mouse (ou toque) para virar. Fontes: SuperVarejo 27/08/2026 e 11/09/2025; NielsenIQ 21/08/2026; IAB Brasil/Kantar IBOPE Media 29/04/2026.</p>
+</section>
+
+<!-- 12 RETAIL MEDIA -->
+<section class="s slide cream" data-th="cream" data-tr="wipe" data-ch="Shopper e tendências" aria-label="Retail media">
+ <div class="bgd"><i style="width:360px;height:360px;right:-60px;top:20%"></i></div>
+ <div class="in" style="justify-content:center">
+  <div class="k a">Tendência em número</div>
+  <h2 class="t" data-kin>Retail media já é verba de trade: R$ 4,8 bi em 2025.</h2>
+  <div class="g" style="grid-template-columns:1.4fr .6fr;margin-top:10px">
+   <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
+    <span style="font:900 120px/1 var(--hd);color:var(--red)">R$</span>
+    <span class="odo" data-v="4,8" style="color:var(--red)"></span>
+    <span style="font:900 120px/1 var(--hd);color:var(--red)">bi</span>
+    <span class="cu a" style="--d:2s;font:900 90px/1 var(--hd);color:var(--navy);margin-left:20px" data-to="37" data-pre="+" data-suf="%">+37%</span>
+   </div>
+   <div class="a z" style="--d:.6s;justify-self:center"><i data-ic="phone" data-s="190"></i></div>
+  </div>
+  <p class="sub a" style="--d:1.2s">A ponta física pode ganhar uma camada paga no app ou na tela da rede.</p>
+  <p class="a" style="--d:1.5s;margin-top:14px"><span class="hy">Hipótese</span> <span style="font:600 19px var(--bd);margin-left:10px">No regional, a oferta de mídia precisa ser conferida rede a rede.</span></p>
+ </div>
+ <p class="src">Fonte: Digital AdSpend, IAB Brasil com Kantar IBOPE Media, via Mercado &amp; Consumo, 29/04/2026.</p>
+</section>
+
+<!-- 13 OPORTUNIDADE: BUSCA -->
+<section class="s slide cream" data-th="cream" data-tr="zoom" data-ch="Oportunidade e insight" aria-label="Busca por Panco">
+ <div class="in" style="padding-top:118px">
+  <div class="k a">Oportunidade · a marca já é procurada</div>
+  <h2 class="t" data-kin style="font-size:52px;max-width:1400px">A Panco já é mais buscada que a Pullman em SP, RJ e PR, e dispara no Natal.</h2>
+  <p class="sub a" style="--d:.5s;margin-top:10px;font-size:24px">No diagnóstico: média 47 contra 33 da Pullman, com pico de 62 em dezembro.</p>
+  <div class="g" style="grid-template-columns:1.55fr 1fr;margin-top:6px;gap:34px">
+   <div id="ch13" class="zsvg" data-zoom data-g="gr" data-cap="Buscas por Panco e Pullman nos últimos 12 meses (Google Trends)"></div>
+   <div id="ch13b" class="zsvg" data-zoom data-g="gr" data-cap="Peso nas buscas da categoria dentro de cada estado (não compara estados)"></div>
+  </div>
+ </div>
+ <p class="src">Fonte: Google Trends, Brasil e por estado, consulta de 10/10/2026. Índice relativo, não mede vendas. Linha: consulta só com Panco e Pullman (pico = 100). Barras: peso dentro de cada estado; compare só barras do mesmo estado. “Pullman” pode incluir buscas por pessoas com esse nome.</p>
+</section>
+
+<!-- 14 INSIGHT -->
+<section class="s slide red" data-th="red" data-tr="zoom" data-ch="Oportunidade e insight" aria-label="Insight">
+ <div class="bgd"><i style="width:700px;height:700px;left:-200px;top:-260px"></i></div>
+ <svg class="abs" viewBox="0 0 1600 120" style="position:absolute;left:0;right:0;bottom:90px;width:1600px;z-index:1" aria-hidden="true">
+  <path class="draw" pathLength="1" style="--d:3s" d="M0 80 H1000 L1060 30 H1600" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+  <circle cx="1060" cy="30" r="9" fill="#FBD72D"/><circle class="ringc" cx="1060" cy="30" r="9" fill="none" stroke="#FBD72D" stroke-width="3"><animate attributeName="r" values="9;40" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/></circle>
+ </svg>
+ <div class="in" style="justify-content:center">
+  <div class="k a">Insight</div>
+  <h2 class="t ty" data-type style="font-size:96px;line-height:1.04;max-width:1350px">Ninguém precisa ganhar a gôndola inteira. Basta ganhar o momento em que o shopper decide.</h2>
+ </div>
+ <p class="src">Síntese 75 LAB.</p>
+</section>
+
+<!-- 15 ESTRATÉGIA -->
+<section class="s slide cream" data-th="cream" data-tr="slide" data-ch="Estratégia" aria-label="Estratégia">
+ <div class="bgd"><i style="width:200px;height:200px;left:40%;top:78%"></i></div>
+ <div class="in">
+  <div class="g" style="grid-template-columns:.9fr 1.1fr;flex:1;align-items:center">
+   <div>
+    <div class="k a">Estratégia</div>
+    <h2 class="t" data-kin style="font-size:72px">Ganhar a loja por ocasião, porção e calendário.</h2>
+    <p class="sub a" style="--d:.8s">O mesmo sistema de peças, contando a história certa em cada época.</p>
+   </div>
+   <svg class="fs" viewBox="0 0 760 640" style="width:760px;justify-self:center" role="img" aria-label="Três círculos: ocasião, porção e calendário, com a Panco no centro">
+    <circle class="pop" style="--d:.5s" cx="270" cy="250" r="190" fill="#D80000" fill-opacity=".88"/>
+    <circle class="pop" style="--d:.8s" cx="490" cy="250" r="190" fill="#FBD72D" fill-opacity=".88"/>
+    <circle class="pop" style="--d:1.1s" cx="380" cy="440" r="190" fill="#20306A" fill-opacity=".88"/>
+    <text x="190" y="190" text-anchor="middle" font-family="Alegreya Sans" font-weight="900" font-size="44" fill="#fff">Ocasião</text>
+    <text x="190" y="224" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="19" fill="#fff">café, lanche</text>
+    <text x="570" y="190" text-anchor="middle" font-family="Alegreya Sans" font-weight="900" font-size="44" fill="#20306A">Porção</text>
+    <text x="570" y="224" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="19" fill="#20306A">bisnaguinha, mini</text>
+    <text x="380" y="560" text-anchor="middle" font-family="Alegreya Sans" font-weight="900" font-size="44" fill="#fff">Calendário</text>
+    <text x="380" y="592" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="19" fill="#fff">Natal, volta às aulas</text>
+    <image class="pop" style="--d:1.5s" href="assets/01-oficina-1791670044931-panco-logo-site-206x161.png" x="318" y="268" width="124" height="97"/>
+   </svg>
+  </div>
+ </div>
+ <p class="src">Síntese 75 LAB; pedido de 14/09 (identidade fixa, comunicação trocável).</p>
+</section>
+
+<!-- 16 MATRIZ -->
+<section class="s slide navy" data-th="navy" data-tr="up" data-ch="Solução" aria-label="Matriz de oportunidades">
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Solução · 7 oportunidades priorizadas</div>
+  <h2 class="t" data-kin style="font-size:56px">Sete oportunidades. Três começam já.</h2>
+  <p class="sub a" style="--d:.4s;margin-top:8px;font-size:23px">Ponta de Natal, Bisnaguinha e bolinho no caixa abrem o caminho.</p>
+  <div id="ch16" class="zsvg" data-zoom data-g="gr" data-cap="Matriz impacto x esforço das 7 oportunidades (julgamento 75 LAB, a validar)" style="margin-top:0"></div>
+ </div>
+ <p class="src">Notas de impacto e esforço: julgamento 75 LAB, a validar com a Panco (Hipótese).</p>
+</section>
+
+<!-- 17 REVEAL -->
+<section class="s slide red" data-th="red" data-tr="zoom" data-ch="Solução" aria-label="Reveal da Ponta de Natal Panco">
+ <div class="kvimg abs" style="position:absolute;inset:0;z-index:1">
+  <img data-zoom data-g="kv" data-cap="Ponta de Natal Panco, 900 x 1.900 x 450 mm, em supermercado regional de São Paulo (mockup criado por IA)" src="assets/06-oficina-1791670272482-ponta.jpg" alt="Mockup da Ponta de Natal Panco no corredor de um supermercado, com panetones e bisnaguinhas" style="object-position:50% 40%">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(216,0,0,.95) 0,rgba(216,0,0,.85) 34%,rgba(216,0,0,0) 62%)"></div>
+ </div>
+ <div class="curtain cl"></div><div class="curtain cr2"></div>
+ <div class="in" style="z-index:5;justify-content:center;padding-right:900px">
+  <div class="k a" style="--d:2.2s">Reveal · oportunidade nº 1</div>
+  <h2 class="t a" style="--d:2.4s;font-size:60px">A ponta que já está em aprovação vira a Ponta de Natal Panco.</h2>
+  <p class="sub a" style="--d:2.8s">Panetone 550 g para a mesa, mini 80 g para o impulso, em supermercado regional de SP.</p>
+ </div>
+ <div class="tag a" style="--d:3.2s;left:1020px;top:170px">Canal: supermercado regional de SP</div>
+ <div class="tag a" style="--d:3.5s;left:1090px;top:520px">Peça: 900 x 1.900 x 450 mm</div>
+ <div class="tag a" style="--d:3.8s;left:880px;top:330px">Produto: panetone 550 g e mini 80 g</div>
+ <p class="src" style="z-index:7;max-width:800px">Imagem ilustrativa criada por IA a partir das embalagens reais (fotos de loja online de terceiro); rótulos recriados, não são arte final. Clique para ampliar.</p>
+</section>
+
+<!-- 18 MINI -->
+<section class="s slide cream" data-th="cream" data-tr="slide" data-ch="Solução" aria-label="Preço por quilo do panetone">
+ <div class="bgd"><i style="width:240px;height:240px;right:3%;top:10%"></i></div>
+ <div class="in">
+  <div class="k a">Por que o mini</div>
+  <h2 class="t" data-kin style="font-size:56px">O mini de 80 g é a porção que dá margem no Natal.</h2>
+  <p class="sub a" style="--d:.4s;margin-top:10px;font-size:24px">Por quilo, o mini custa de 3 a 4 vezes o panetone de 400 g.</p>
+  <div class="g" style="grid-template-columns:1.55fr .45fr;gap:20px">
+   <div id="ch18" class="zsvg" data-zoom data-g="gr" data-cap="Preço por quilo de panetone e mini panetone em lojas online, 10/10/2026"></div>
+   <div class="a" style="--d:2s;justify-self:center;text-align:center"><img data-zoom data-g="pk" data-cap="Embalagens reais Panco: Panetone Trufado 550 g e Mini Panettone Frutas 80 g (fotos de loja online de terceiro)" src="assets/07-a-1791670045552-panettone-550g-trufado-real-transparente.png" alt="Caixa do Panetone Trufado Panco 550 g" style="width:200px;margin:0 auto" loading="lazy"><img data-zoom data-g="pk" data-cap="Mini Panettone Frutas Panco 80 g" src="assets/08-791670046408-mini-panettone-80g-frutas-real-transparente.png" alt="Caixa do Mini Panettone Frutas Panco 80 g" style="width:140px;margin:6px auto 0" loading="lazy"></div>
+  </div>
+ </div>
+ <p class="src">Fontes: Drogaria São Paulo e Americanas online, 10/10/2026; Tenda Atacado (Trufado 550 g, R$ 33,90 online por CEP), 10/10/2026. A razão “3 a 4 vezes” e o R$/kg da Panco são contas 75 LAB. Preço oficial da Panco: a confirmar.</p>
+</section>
+
+<!-- 19 DETALHES TÉCNICOS -->
+<section class="s slide cream" data-th="cream" data-tr="wipe" data-ch="Solução" aria-label="Detalhes técnicos da ponta">
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Detalhes técnicos · esquema com cotas</div>
+  <h2 class="t" data-kin style="font-size:54px">Estrutura fixa, comunicação trocável: a ponta vive o ano todo.</h2>
+  <p class="sub a" style="--d:.4s;margin-top:8px;font-size:23px">900 x 1.900 x 450 mm; a arte de Natal sai e entra a de café da manhã.</p>
+  <div id="ch19" class="zsvg" data-zoom data-g="gr" data-cap="Esquema técnico da Ponta de Natal Panco: vista frontal, lateral e explodida (divisões ilustrativas)" style="margin-top:0"></div>
+ </div>
+ <p class="src">Medidas: card Panco no Ariuno (ponta em aprovação comercial). Divisões internas e camadas são ilustrativas; materiais e montagem: a definir com a produção.</p>
+</section>
+
+<!-- 20 BISNAGUINHA -->
+<section class="s slide red" data-th="red" data-tr="slide" data-ch="Solução" aria-label="Bisnaguinha Panco na ilha">
+ <div class="bgd"><i style="width:260px;height:260px;right:2%;bottom:6%"></i></div>
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Oportunidade nº 2 · Bisnaguinha Panco</div>
+  <h2 class="t" data-kin style="font-size:54px;max-width:1350px">A Bisnaguinha Panco ganha pelo valor por porção, na ilha do café da manhã.</h2>
+  <div class="g" style="grid-template-columns:1.25fr .75fr;margin-top:20px;gap:36px;align-items:start">
+   <div class="a z" style="--d:.5s"><img data-zoom data-g="kv" data-cap="Ilha de calendário: Bisnaguinha Panco o ano todo, panetone no Natal (mockup criado por IA)" src="assets/09-oficina-1791670273215-ilha.jpg" alt="Mockup de ilha de supermercado com bisnaguinhas e panetones Panco" style="border-radius:14px;width:100%;height:470px;object-fit:cover" loading="lazy"></div>
+   <div>
+    <div class="zsvg a" data-zoom data-g="gr" data-cap="Planta ilustrativa da ilha (medidas a definir)" style="--d:1s;background:var(--cream);border-radius:14px;padding:12px" id="ch20"></div>
+    <p class="sub a" style="--d:1.4s;font-size:22px;margin-top:14px">Contra a Seven Boys, o argumento é quanto custa cada café, não cada pacote.</p>
+    <p class="a" style="--d:1.6s;margin-top:10px"><span class="hy">Preço Panco a confirmar antes de levar à rede</span></p>
+   </div>
+  </div>
+ </div>
+ <p class="src">Fonte: Americanas online, 10/10/2026. Argumento de porção: Hipótese 75 LAB. Mockup criado por IA a partir das embalagens reais; planta ilustrativa, medidas a definir.</p>
+</section>
+
+<!-- 21 BENEFÍCIOS -->
+<section class="s slide cream" data-th="cream" data-tr="zoom" data-ch="Solução" aria-label="Benefícios conectados">
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Benefícios · resultado esperado, não real</div>
+  <div class="g" style="grid-template-columns:.8fr 1.2fr;flex:1">
+   <div><h2 class="t" data-kin style="font-size:60px">Uma peça, cinco ganhos conectados.</h2></div>
+   <svg class="fs" id="eco" viewBox="0 0 800 640" style="width:800px;justify-self:center" role="img" aria-label="Ecossistema: shopper, marca, varejo, operação e dados ao redor da ponta"></svg>
+  </div>
+ </div>
+ <p class="src">Síntese 75 LAB. Ganhos esperados, a medir no piloto.</p>
+</section>
+
+<!-- 22 EXECUÇÃO -->
+<section class="s slide navy" data-th="navy" data-tr="wipe" data-ch="Execução e mensuração" aria-label="Piloto">
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Execução · piloto</div>
+  <h2 class="t" data-kin style="font-size:56px">Começar pequeno: lojas piloto contra lojas parecidas sem a ponta.</h2>
+  <p class="sub a" style="--d:.4s;margin-top:8px;font-size:24px">O piloto prova antes de escalar para a rede.</p>
+  <div class="g" style="grid-template-columns:1.2fr .8fr;margin-top:6px">
+   <svg class="fs" id="pil" viewBox="0 0 900 420" style="width:900px" role="img" aria-label="Pares de lojas: piloto em vermelho e controle em cinza"></svg>
+   <div>
+    <div class="chip a" style="--d:1.6s"><i data-ic="pin"></i><div><b>Piloto</b>Lojas com a Ponta de Natal Panco</div></div>
+    <div class="chip a" style="--d:1.8s;margin-top:22px"><i data-ic="store"></i><div><b>Controle</b>Lojas parecidas, sem a ponta</div></div>
+    <p class="a" style="--d:2.1s;margin-top:26px;display:flex;gap:12px;align-items:center"><span class="hy">Hipótese</span> <span style="font:600 20px var(--bd);margin-left:8px">Número de lojas: a definir com a Panco e a rede.</span></p>
+   </div>
+  </div>
+ </div>
+ <p class="src">Análise 75 LAB. O desenho é esquemático, não mostra lojas reais.</p>
+</section>
+
+<!-- 23 ONE SHOT -->
+<section class="s slide cream" data-th="cream" data-tr="up" data-ch="Execução e mensuração" aria-label="Plano de rastreamento One Shot">
+ <div class="bgd"><i style="width:300px;height:300px;left:-60px;top:62%"></i></div>
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Plano de Rastreamento 75 LAB · One Shot</div>
+  <h2 class="t" data-kin style="font-size:56px">Na montagem, cada ponta prova que existe, no lugar certo e no prazo.</h2>
+  <p class="sub a" style="--d:.4s;margin-top:8px;font-size:24px">Foto de execução, check de montagem e conformidade em uma visita.</p>
+  <svg class="fs" viewBox="0 0 1420 60" style="width:1420px;margin-top:34px" aria-hidden="true"><path class="draw" pathLength="1" style="--d:.7s" d="M20 30H1400" stroke="#D80000" stroke-width="5" stroke-linecap="round"/><g id="os-dots"></g></svg>
+  <div class="g" style="grid-template-columns:repeat(6,1fr);gap:18px;margin-top:6px;align-items:start">
+   <div class="a" style="--d:.9s"><i data-ic="cam" data-s="84"></i><b class="os">Foto de execução</b><p class="os2">com data e loja</p></div>
+   <div class="a" style="--d:1.1s"><i data-ic="clock" data-s="84"></i><b class="os">Montagem no prazo</b><p class="os2">conferida até 48 h depois da entrega (Hipótese)</p></div>
+   <div class="a" style="--d:1.3s"><i data-ic="check" data-s="84"></i><b class="os">Checklist</b><p class="os2">posição, abastecimento, preço visível</p></div>
+   <div class="a" style="--d:1.5s"><i data-ic="pin" data-s="84"></i><b class="os">Localização</b><p class="os2">loja e corredor certos</p></div>
+   <div class="a" style="--d:1.7s"><i data-ic="doc" data-s="84"></i><b class="os">Relatório</b><p class="os2">da implantação</p></div>
+   <div class="a" style="--d:1.9s"><i data-ic="alert" data-s="84"></i><b class="os">Alerta</b><p class="os2">pendência para corrigir</p></div>
+  </div>
+ </div>
+ <p class="src">Prática da 75 LAB (Trade Visit e QR operacional já propostos nos decks de 06/10/2026). Janela de 48 h: Hipótese a validar com o fornecedor.</p>
+</section>
+
+<!-- 24 ON TIMING -->
+<section class="s slide red" data-th="red" data-tr="zoom" data-ch="Execução e mensuração" aria-label="Plano de rastreamento On Timing">
+ <div class="bgd"><i style="width:420px;height:420px;left:-120px;top:-120px"></i></div>
+ <div class="in" style="padding-top:116px;flex-direction:row;gap:50px">
+  <div style="width:560px;flex:none">
+   <div class="k a">Plano de Rastreamento 75 LAB · On Timing</div>
+   <h2 class="t" data-kin style="font-size:52px">Durante o Natal, a ponta é acompanhada toda semana até sair da loja.</h2>
+   <p class="sub a" style="--d:.5s;font-size:23px">Visita recorrente, ruptura, abastecimento e sell-out por loja, com alerta.</p>
+   <p class="a" style="--d:.8s;margin-top:18px;font:600 18px/1.35 var(--bd)">Sensores e telemetria: opção a avaliar, não incluída nesta proposta.</p>
+  </div>
+  <div id="ot" style="flex:1;position:relative"></div>
+ </div>
+ <p class="src">Prática da 75 LAB. O sell-out por loja depende de dado da cliente ou da rede.</p>
+</section>
+
+<!-- 25 MENSURAÇÃO -->
+<section class="s slide cream" data-th="cream" data-tr="slide" data-ch="Execução e mensuração" aria-label="Indicadores">
+ <div class="bgd"><i style="width:200px;height:200px;right:6%;top:6%"></i></div>
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Mensuração · resultado esperado, não real</div>
+  <h2 class="t" data-kin style="font-size:58px">Três números dizem se a ponta funciona.</h2>
+  <p class="sub a" style="--d:.4s;margin-top:8px;font-size:24px">A linha de base sai do piloto; as metas ficam a definir com ela.</p>
+  <div class="g" style="grid-template-columns:repeat(3,1fr);gap:34px;margin-top:30px;align-items:stretch">
+   <div class="a" style="--d:.7s"><div class="ind"><i data-ic="chart" data-s="64"></i><b>1 · Vendas</b><p>Panetone Panco com ponta x sem ponta</p><svg viewBox="0 0 400 40"><rect x="0" y="8" width="400" height="24" rx="12" fill="none" stroke="#20306A" stroke-width="3" stroke-dasharray="8 6"/><rect class="scan" style="--d:1.4s" x="0" y="8" width="90" height="24" rx="12" fill="#D80000" fill-opacity=".25"/></svg><em>meta: a definir com a linha de base</em></div></div>
+   <div class="a" style="--d:1s"><div class="ind"><i data-ic="check" data-s="64"></i><b>2 · Execução no prazo</b><p>% de pontas montadas e conformes</p><svg viewBox="0 0 400 40"><rect x="0" y="8" width="400" height="24" rx="12" fill="none" stroke="#20306A" stroke-width="3" stroke-dasharray="8 6"/><rect class="scan" style="--d:1.7s" x="0" y="8" width="90" height="24" rx="12" fill="#D80000" fill-opacity=".25"/></svg><em>meta: a definir com a linha de base</em></div></div>
+   <div class="a" style="--d:1.3s"><div class="ind"><i data-ic="gondola" data-s="64"></i><b>3 · Frentes e ruptura</b><p>por visita, em cada loja</p><svg viewBox="0 0 400 40"><rect x="0" y="8" width="400" height="24" rx="12" fill="none" stroke="#20306A" stroke-width="3" stroke-dasharray="8 6"/><rect class="scan" style="--d:2s" x="0" y="8" width="90" height="24" rx="12" fill="#D80000" fill-opacity=".25"/></svg><em>meta: a definir com a linha de base</em></div></div>
+  </div>
+  <p class="sub a" style="--d:2.2s;margin-top:28px;font-size:23px">Bisnaguinha: preço por quilo Panco x Seven Boys na mesma loja.</p>
+ </div>
+ <p class="src">Diagnóstico 75 LAB. Nenhuma meta foi inventada: valores reais só depois do piloto.</p>
+</section>
+
+<!-- 26 CRONOGRAMA -->
+<section class="s slide navy" data-th="navy" data-tr="wipe" data-ch="Cronograma" aria-label="Cronograma até o Natal">
+ <div class="in" style="padding-top:112px">
+  <div class="k a">Cronograma · proposta 75 LAB</div>
+  <h2 class="t" data-kin style="font-size:54px">Para chegar à loja em novembro, a decisão precisa sair até 30/10.</h2>
+  <div id="gt" class="zsvg" data-zoom data-g="gr" data-cap="Cronograma de 13/10/2026 a 15/01/2027 (proposta 75 LAB, prazos a confirmar)" style="margin-top:6px"></div>
+ </div>
+ <p class="src">Proposta 75 LAB; prazos de produção a confirmar com o fornecedor (Hipótese). Feriados nacionais: 12/10, 02/11 e 20/11. Natal: sexta, 25/12.</p>
+</section>
+
+<!-- 27 PRÓXIMOS PASSOS -->
+<section class="s slide yel" data-th="yel" data-tr="up" data-ch="Cronograma" aria-label="Próximos passos">
+ <div class="bgd"><i style="width:380px;height:380px;right:-80px;bottom:-100px"></i></div>
+ <div class="in" style="padding-top:116px">
+  <div class="k a">Próximos passos</div>
+  <h2 class="t" data-kin style="font-size:60px">Três decisões nesta semana destravam o Natal.</h2>
+  <div class="g" style="grid-template-columns:repeat(3,1fr);gap:30px;margin-top:34px;align-items:stretch">
+   <div class="a" style="--d:.6s;background:var(--navy);color:#fff;border-radius:20px;padding:30px"><span style="font:900 110px/1 var(--hd);color:var(--yel)">1</span><p style="font:700 28px/1.2 var(--hd);margin-top:8px">Aprovar a arte de Natal sobre a ponta que já está em aprovação</p></div>
+   <div class="a" style="--d:.9s;background:var(--red);color:#fff;border-radius:20px;padding:30px"><span style="font:900 110px/1 var(--hd);color:var(--yel)">2</span><p style="font:700 28px/1.2 var(--hd);margin-top:8px">Enviar a tabela de preço: panetone 550 g, mini 80 g e Bisnaguinha Panco</p></div>
+   <div class="a" style="--d:1.2s;background:#fff;color:var(--navy);border-radius:20px;padding:30px"><span style="font:900 110px/1 var(--hd);color:var(--red)">3</span><p style="font:700 28px/1.2 var(--hd);margin-top:8px">Escolher a rede regional e as lojas piloto</p></div>
+  </div>
+  <p class="a" style="--d:1.8s;margin-top:26px;font:600 20px/1.4 var(--bd);max-width:1300px"><b>O que falta confirmar:</b> preço de gôndola da Panco · prazo e fornecedor da produção · rede e número de lojas · bolinho individual e pão de hambúrguer no portfólio · dados da Abimapi conferidos no site da associação.</p>
+ </div>
+ <p class="src">Cronograma e decisões: proposta 75 LAB, a alinhar com a Panco.</p>
+</section>
+
+<!-- 28 ENCERRAMENTO -->
+<section class="s slide red" data-th="red" data-tr="zoom" data-ch="Encerramento" aria-label="Encerramento estratégico">
+ <div class="kvimg zo abs" style="position:absolute;inset:0;z-index:1">
+  <img data-zoom data-g="kv" data-cap="Key visual: a Panco encontrada na loja (cena criada por IA)" src="assets/04-47923-kv3b-ilha-calendario-embalagens-reais-ref-1600x900.jpg" alt="Ilha de supermercado Panco com bisnaguinhas e panetones" loading="lazy">
+  <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(216,0,0,.96) 0,rgba(216,0,0,.82) 34%,rgba(216,0,0,0) 66%)"></div>
+ </div>
+ <div class="in" style="z-index:5;justify-content:flex-end;padding-bottom:110px">
+  <div class="k a" style="--d:1.4s">Encerramento</div>
+  <h2 class="t a" style="--d:1.6s;font-size:84px;max-width:1100px">A Panco já é procurada. Agora ela vai ser encontrada.</h2>
+ </div>
+ <div class="a z" style="--d:2.4s;position:absolute;right:90px;bottom:100px;z-index:6;background:#fff;color:var(--navy);border-radius:16px;padding:16px 18px;width:300px">
+  <div style="display:flex;align-items:baseline;gap:10px"><span class="cu" data-to="62" style="font:900 56px/1 var(--hd);color:var(--red)">62</span><span style="font:700 15px/1.2 var(--bd)">busca em 14/12/2025</span></div>
+  <div id="cal" style="margin-top:8px"></div>
+ </div>
+ <p class="src" style="z-index:7">Calendário: dezembro de 2026, com o pico de Natal (14/12 a 24/12). Imagem criada por IA.</p>
+</section>
+
+<!-- 29 INSTITUCIONAL -->
+<section class="s slide navy" data-th="navy" data-tr="slide" data-ch="Institucional" aria-label="75 LAB institucional">
+ <div class="bgd"><i style="width:520px;height:520px;right:-140px;top:-160px"></i><i style="width:200px;height:200px;left:6%;top:70%"></i></div>
+ <div class="in" style="padding-top:128px">
+  <div class="g" style="grid-template-columns:.95fr 1.05fr;gap:70px;flex:1;align-items:start">
+   <div>
+    <img class="a" src="assets/10-logo-lime.svg" alt="Logo 75 LAB" style="width:340px">
+    <h2 class="t a" style="--d:.3s;margin-top:34px;font-size:64px">Ideia boa é a que acontece.</h2>
+    <p class="sub a" style="--d:.6s;font-size:23px">Estratégia, design e produção para trade marketing, PDV e varejo.</p>
+    <div class="a" style="--d:.9s;margin-top:34px;display:flex;align-items:center;gap:22px"><img src="assets/01-oficina-1791670044931-panco-logo-site-206x161.png" alt="Logo Panco" style="width:100px"><span style="font:600 20px/1.3 var(--bd);opacity:.9">Obrigado, Panco.</span></div>
+   </div>
+   <div style="font:400 21px/1.5 var(--bd)">
+    <div class="a" style="--d:.5s"><small class="inst">Razão social</small>75 LAB ESTRATÉGIA, DESIGN E PRODUÇÃO LTDA</div>
+    <div class="a" style="--d:.65s"><small class="inst">CNPJ</small>55.470.982/0001-77</div>
+    <div class="a" style="--d:.8s"><small class="inst">Endereço</small>Rua Jurubatuba, 1350, conj. 913, Centro, São Bernardo do Campo, SP, CEP 09725-000</div>
+    <div class="a" style="--d:.95s"><small class="inst">Contato</small>(11) 8864-8434 · contato@75lab.com.br · 75lab.com.br · Instagram @setecincolab</div>
+    <div class="a" style="--d:1.2s;margin-top:22px;border-top:2px solid var(--yel);padding-top:16px"><small class="inst">Apresentador</small><b style="font:800 32px var(--hd)">Caique Becker</b><br>Cofundador e Head de Trade · caique.becker@75lab.com.br<br><span style="opacity:.85">Telefone direto: [a preencher]</span></div>
+   </div>
+  </div>
+ </div>
+ <p class="src">Dados institucionais 75 LAB, outubro de 2026.</p>
+</section>
+</div><!-- /stage -->
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><button id="lbx" aria-label="Fechar">×</button><button id="lbp" aria-label="Anterior">‹</button><div id="lbc"></div><p id="lbt"></p><button id="lbn" aria-label="Próxima">›</button></div>
+<style>
+.g[style*='auto-rows']>div{height:100%}
+.ind{background:#fff;border-radius:18px;padding:28px;height:100%;box-shadow:0 8px 24px rgba(32,48,106,.12)}
+.ind b{display:block;font:800 32px/1.05 var(--hd);margin:14px 0 6px}.ind p{font:400 22px/1.3 var(--bd)}.ind svg:not(.ic){width:100%;margin-top:18px;overflow:hidden}.ind em{display:block;font:600 17px var(--bd);font-style:normal;margin-top:6px}
+.scan{animation:scn 2.6s ease-in-out infinite alternate;fill-opacity:.55}
+@keyframes scn{from{transform:translateX(0)}to{transform:translateX(310px)}}
+.os{display:block;font:800 27px/1.05 var(--hd);margin-top:14px}.os2{font:400 18px/1.3 var(--bd);margin-top:6px}
+.inst{display:block;font:700 15px var(--bd);letter-spacing:.16em;text-transform:uppercase;color:var(--yel);margin-top:12px}
+.jr{display:grid;grid-template-columns:150px repeat(4,1fr);gap:10px 14px;align-items:start}
+.jh{font:700 16px var(--bd);letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.jl{display:flex;align-items:center;gap:10px;font:800 26px/1 var(--hd)}
+.jc{border-top:5px solid var(--red);padding-top:10px;font:400 19px/1.3 var(--bd);position:relative;min-height:112px}
+.jc.n{border-top-color:var(--navy)}.jc.y{border-top-color:#C89B00}
+.jc:after{content:"›";position:absolute;right:-14px;top:-24px;font:700 28px var(--bd);color:var(--red)}
+.jc:last-child:after{display:none}
+.ots{display:flex;align-items:center;gap:22px;height:92px;position:relative}
+.ots .nm{width:68px;height:68px;border-radius:50%;background:#fff;color:var(--red);display:flex;align-items:center;justify-content:center;flex:none;z-index:2}
+.ots .nm .ic{width:38px;height:38px}
+.ots b{display:block;font:800 30px/1 var(--hd);letter-spacing:.02em}.ots p{font:400 21px/1.2 var(--bd);margin-top:3px}
+#otl{position:absolute;left:33px;top:46px;bottom:46px;width:4px;background:rgba(255,255,255,.35);z-index:1}
+#otd{position:absolute;left:25px;top:46px;width:20px;height:20px;border-radius:50%;background:var(--yel);z-index:3;animation:run 4.5s ease-in-out infinite}
+@keyframes run{0%{top:46px}100%{top:calc(100% - 66px)}}
+body.mob .jr{grid-template-columns:1fr 1fr}body.mob .jl{grid-column:1/-1}body.mob .jh{display:none}
+
+body.flat{overflow:auto;background:#fff}
+body.flat #stage{position:static;width:1600px;height:auto;transform:none!important;overflow:visible}
+body.flat .s{position:relative;visibility:visible!important;opacity:1!important;height:900px;animation:none!important;clip-path:none!important}
+body.flat .a,body.flat .pop{opacity:1!important;animation:none!important;transform:none!important}
+body.flat .draw{stroke-dashoffset:var(--to)!important;animation:none!important}
+body.flat .bar,body.flat .barn,body.flat .barx{transform:none!important;animation:none!important}
+body.flat .w>span{transform:none!important;animation:none!important}
+body.flat .ty span{opacity:1!important;animation:none!important}
+body.flat .odo .st2{transform:translateY(calc(var(--n)*-1em))!important;animation:none!important}
+body.flat .curtain{display:none}
+body.flat .bgd{display:none}body.flat .pan img,body.flat .zo img{animation:none!important}body.flat #hd.top{display:none}body.flat #nv,body.flat #pg,body.flat #chp{display:none}
+body.flat .s>.hdc{position:absolute;left:0;right:0;top:0;height:112px;padding:48px 90px 0;display:flex;align-items:flex-start;justify-content:space-between;z-index:30}
+body.flat .s>.hdc #chb{display:none}
+body.flat .s.cream>.hdc,body.flat .s.yel>.hdc{color:var(--navy)}body.flat .s.red>.hdc,body.flat .s.navy>.hdc{color:#fff}
+body.flat .s.cream .l75w,body.flat .s.yel .l75w{display:none}body.flat .s.cream .l75b,body.flat .s.yel .l75b{display:block}
+body.flat .s.red .l75b,body.flat .s.navy .l75b{display:none}body.flat .s.red .l75w,body.flat .s.navy .l75w{display:block}
+</style>
+<script>
+(function(){
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const NS='http://www.w3.org/2000/svg';
+const IC={
+pin:'<path d="M24 42s-12-12-12-21a12 12 0 0124 0c0 9-12 21-12 21z"/><circle cx="24" cy="21" r="4"/><circle class="ring" cx="24" cy="21" r="9"/>',
+cam:'<rect x="6" y="14" width="36" height="26" rx="4"/><circle cx="24" cy="27" r="7"/><path d="M17 14l3-5h8l3 5"/><circle class="blink" cx="37" cy="20" r="1.8" fill="currentColor"/>',
+clock:'<circle cx="24" cy="24" r="17"/><path class="hand" d="M24 24V12"/><path d="M24 24l8 4"/>',
+check:'<rect x="8" y="6" width="32" height="36" rx="4"/><path class="tick" d="M15 18l4 4 7-8"/><path d="M15 32h18"/>',
+doc:'<path d="M12 5h17l8 8v30H12z"/><path d="M29 5v8h8M18 24h14M18 31h14"/><path class="w1" d="M18 17h6"/>',
+alert:'<g class="pu"><path d="M24 6l19 34H5z"/><path d="M24 18v10"/><circle cx="24" cy="34" r="1.5" fill="currentColor"/></g>',
+chart:'<path d="M6 42h36"/><rect class="b1" x="10" y="26" width="7" height="16"/><rect class="b2" x="21" y="16" width="7" height="26"/><rect class="b3" x="32" y="8" width="7" height="34"/>',
+wifi:'<path class="w2" d="M9 17a21 21 0 0130 0"/><path class="w1" d="M14 22a14 14 0 0120 0"/><path d="M19 27a7 7 0 0110 0"/><circle cx="24" cy="34" r="2.5" fill="currentColor"/>',
+phone:'<rect x="14" y="4" width="20" height="40" rx="4"/><path d="M21 38h6"/><circle class="dot" cx="24" cy="12" r="2" fill="currentColor"/><path class="w1" d="M6 14a24 24 0 000 20M42 14a24 24 0 010 20"/>',
+cart:'<g class="mv"><path d="M4 8h6l5 22h22l4-16H13"/><circle cx="18" cy="38" r="3"/><circle cx="34" cy="38" r="3"/></g>',
+lupa:'<g class="sc"><circle cx="21" cy="21" r="12"/><path d="M30 30l12 12"/></g>',
+cup:'<path d="M8 20h28v10a10 10 0 01-10 10h-8A10 10 0 018 30z"/><path d="M36 22h4a5 5 0 010 10h-5"/><path class="st" d="M16 14c-2-3 2-4 0-8M24 14c-2-3 2-4 0-8"/>',
+slice:'<g class="pu"><path d="M6 36L24 8l18 28z"/><circle cx="20" cy="28" r="2"/><circle cx="29" cy="30" r="2"/></g>',
+calendar:'<rect x="6" y="9" width="36" height="33" rx="4"/><path d="M6 19h36M15 5v8M33 5v8"/><circle class="dayd" cx="30" cy="30" r="3.5" fill="currentColor"/>',
+target:'<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="2.5" fill="currentColor"/><circle class="ring" cx="24" cy="24" r="17"/>',
+store:'<path d="M6 18l4-10h28l4 10"/><path d="M6 18a6 6 0 0012 0 6 6 0 0012 0 6 6 0 0012 0M10 26v16h28V26"/>',
+gondola:'<path d="M12 6v36M36 6v36M12 14h24M12 26h24M12 38h24"/><circle class="blink" cx="24" cy="20" r="2.2" fill="currentColor"/>',
+data:'<ellipse cx="24" cy="12" rx="14" ry="5"/><path d="M10 12v24c0 3 6 5 14 5s14-2 14-5V12M10 24c0 3 6 5 14 5s14-2 14-5"/><circle class="dot" cx="24" cy="20" r="1.8" fill="currentColor"/>'
+};
+function icon(n,s){return '<svg class="ic" viewBox="0 0 48 48" style="width:'+s+'px;height:'+s+'px" aria-hidden="true">'+IC[n]+'</svg>'}
+$$('[data-ic]').forEach(e=>{const w=document.createElement('span');w.style.cssText='display:inline-flex;flex:none;color:inherit';w.innerHTML=icon(e.dataset.ic,e.dataset.s||56);e.replaceWith(w)});
+const fmtN=(v,d)=>v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const h=(tag,a,inner)=>'<'+tag+' '+Object.entries(a||{}).map(([k,v])=>k+'="'+v+'"').join(' ')+'>'+(inner||'')+'</'+tag+'>';
+const T=(x,y,t,o={})=>'<text x="'+x+'" y="'+y+'" text-anchor="'+(o.a||'start')+'" font-family="'+(o.f||'Open Sans')+'" font-weight="'+(o.w||600)+'" font-size="'+(o.s||20)+'" fill="'+(o.c||'#20306A')+'"'+(o.x||'')+'>'+t+'</text>';
+
+/* ---- agenda ---- */
+(function(){const g=$('.stops');if(!g)return;
+const st=[[330,120,'lupa','Leitura','o desafio real',3,'t'],[620,250,'chart','Mercado','vende mais caro',4,'b'],[900,120,'cart','Shopper','a ocasião decide',9,'t'],[1180,250,'gondola','Caminho','7 oportunidades',15,'b'],[1360,150,'target','Prova','medir loja a loja',22,'b']];
+let o='';st.forEach((s,i)=>{const d=(.9+i*.35)+'s';const ty=s[6]==='t';
+o+='<g class="pop mag" style="--d:'+d+'" tabindex="0" role="button" aria-label="Ir para '+s[3]+'" data-go="'+s[5]+'"><circle cx="'+s[0]+'" cy="'+s[1]+'" r="48" fill="#D80000"/><svg x="'+(s[0]-28)+'" y="'+(s[1]-28)+'" width="56" height="56" viewBox="0 0 48 48" class="ic" style="color:#fff">'+IC[s[2]]+'</svg></g>';
+const ly=ty?s[1]-86:s[1]+86;
+o+='<g class="a" style="--d:'+d+'">'+T(s[0],ly,'0'+(i+1)+' · '+s[3],{a:'middle',f:'Alegreya Sans',w:900,s:36})+T(s[0],ly+(ty?-0:30)+(ty?30:0),s[4],{a:'middle',s:21}).replace('y="'+(ly+30)+'"','y="'+(ly+30)+'"')+'</g>';});
+g.innerHTML=o;})();
+
+/* ---- constelação ---- */
+(function(){const s=$('#const');if(!s)return;
+const c=[380,230],sat=[['Pullman',120,70],['Plusvita',110,390],['Wickbold',360,38],['Seven Boys',560,90],['Ana Maria',500,400]];
+let o='';sat.forEach((m,i)=>{o+='<path class="draw" pathLength="1" style="--d:'+(1+i*.25)+'s" d="M'+c[0]+' '+c[1]+'L'+m[1]+' '+m[2]+'" stroke="#FBD72D" stroke-width="3" fill="none" stroke-linecap="round"/>';});
+sat.forEach((m,i)=>{o+='<g class="pop" style="--d:'+(1.3+i*.25)+'s"><rect x="'+(m[1]-80)+'" y="'+(m[2]-26)+'" width="160" height="52" rx="26" fill="#fff"/>'+T(m[1],m[2]+8,m[0],{a:'middle',s:23,w:700})+'</g>';});
+o+='<g class="pop" style="--d:.8s"><circle cx="'+c[0]+'" cy="'+c[1]+'" r="74" fill="#FBD72D"/>'+T(c[0],c[1]+12,'Bimbo',{a:'middle',f:'Alegreya Sans',w:900,s:44})+'</g>';
+o+='<g class="pop" style="--d:2.6s"><circle cx="685" cy="250" r="60" fill="#F43D3D" stroke="#fff" stroke-width="5"/>'+T(685,262,'Panco',{a:'middle',f:'Alegreya Sans',w:900,s:34,c:'#fff'})+'</g>';
+o+='<path class="draw" pathLength="1" style="--d:3s;stroke-dasharray:.03 .03" d="M470 238H610" stroke="#fff" stroke-opacity=".7" stroke-width="3" fill="none"/>';
+s.innerHTML=o;})();
+
+/* ---- gráfico 5 ---- */
+(function(){const e=$('#ch5');if(!e)return;const z=170,k=38;
+const bars=[[215,1.1,'v'],[395,-3.9,'q'],[815,3.5,'v'],[995,-3.4,'q']];
+let o='<svg class="fs" viewBox="0 0 1400 380" style="width:1400px" role="img" aria-label="Pão: valor +1,1% e volume -3,9%. Panetone: valor +3,5% e volume -3,4%">';
+o+='<line x1="60" x2="1340" y1="'+z+'" y2="'+z+'" stroke="#20306A" stroke-width="2"/>';
+bars.forEach((b,i)=>{const hgt=Math.abs(b[1])*k;const pos=b[1]>0;const col=b[2]==='v'?'#20306A':'#D80000';
+o+='<rect class="'+(pos?'bar':'barn')+'" style="--d:'+(.5+i*.25)+'s" x="'+b[0]+'" y="'+(pos?z-hgt:z)+'" width="150" height="'+hgt+'" fill="'+col+'" rx="6"/>';
+o+='<g class="a f" style="--d:'+(1.1+i*.25)+'s">'+T(b[0]+75,pos?z-hgt-12:z+hgt+30,(pos?'+':'-')+fmtN(Math.abs(b[1]),1)+'%',{a:'middle',f:'Alegreya Sans',w:900,s:42,c:col})+'</g>';});
+o+=T(395,360,'Pão industrializado · 1º sem. 2026',{a:'middle',s:23,w:700})+T(995,360,'Panetone · safra 2025/26',{a:'middle',s:23,w:700});
+o+='<rect x="1090" y="14" width="22" height="22" fill="#20306A" rx="4"/>'+T(1122,32,'Valor (R$)',{s:20})+'<rect x="1090" y="48" width="22" height="22" fill="#D80000" rx="4"/>'+T(1122,66,'Volume (quilos)',{s:20});
+o+='</svg>';e.innerHTML=o;})();
+
+/* ---- mapa de concorrentes ---- */
+(function(){const e=$('#ch7');if(!e)return;
+const X=v=>330+(v-18)*62.35,Y=v=>470-v*84;let o='<svg class="fs" viewBox="0 0 1420 530" style="width:1420px" role="img" aria-label="Mapa: preço da bisnaguinha por quilo no eixo horizontal e ocasiões cobertas no vertical">';
+o+='<defs><pattern id="hat" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#E7E5BE"/><path d="M0 0v12" stroke="#cfcb9b" stroke-width="3"/></pattern></defs>';
+o+='<rect x="14" y="30" width="290" height="440" rx="14" fill="url(#hat)"/>'+T(159,462,'preço não confirmado',{a:'middle',s:17,w:700,c:'#6b7090'});
+for(let v=0;v<=5;v++){o+='<line x1="330" x2="1390" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="#20306A" stroke-opacity="'+(v?'.12':'.5')+'" stroke-width="2"/>'+T(340,Y(v)-6,String(v),{s:16,c:'#6b7090'});}
+o+=T(338,22,'ocasiões cobertas (0 a 5)',{s:17,w:700,c:'#6b7090'});
+[20,25,30].forEach(v=>{o+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="'+Y(0)+'" y2="'+(Y(0)+8)+'" stroke="#20306A" stroke-width="2"/>'+T(X(v),Y(0)+30,'R$ '+v+'/kg',{a:'middle',s:17,c:'#6b7090'});});
+o+=T(700,520,'preço da bisnaguinha (R$ por quilo, Americanas, 10/10/2026)',{a:'middle',s:18,w:700});
+o+='<rect class="a f" style="--d:2.4s" x="332" y="30" width="1058" height="86" rx="14" fill="#FBD72D" fill-opacity=".35" stroke="#D80000" stroke-width="3" stroke-dasharray="10 8"><animate attributeName="fill-opacity" values=".15;.45;.15" dur="3s" repeatCount="indefinite"/></rect>'+'<g class="a f" style="--d:2.6s">'+T(1370,100,'espaço livre: pão do dia a dia + Natal',{a:'end',s:20,w:700,c:'#D80000'})+'</g>';
+const pts=[['Pullman',1195,Y(2),'#20306A',0,22],['Plusvita',1225,Y(2),'#20306A',0,22],['Bauducco',X(30.73),Y(4),'#1C8CD6',0,22],['Visconti',X(29.13),Y(3),'#1C8CD6',0,22],['Seven Boys',X(21.17),Y(4),'#20306A',1,22]];
+pts.forEach((p,i)=>{o+='<circle class="pop" style="--d:'+(.5+i*.2)+'s" cx="'+p[1]+'" cy="'+p[2]+'" r="'+p[5]+'" fill="'+(p[4]?'#fff':p[3])+'" stroke="'+p[3]+'" stroke-width="4"'+(p[4]?' stroke-dasharray="6 5"':'')+'/>';});
+o+='<g class="a" style="--d:1.6s">'+T(1210,Y(2)+52,'Pullman · Plusvita',{a:'middle',s:19,w:700})+T(X(30.73),Y(4)+50,'Bauducco',{a:'middle',s:19,w:700})+T(X(29.13),Y(3)+50,'Visconti',{a:'middle',s:19,w:700})+T(X(21.17),Y(4)+50,'Seven Boys (preço sugerido)',{a:'middle',s:19,w:700})+'</g>';
+o+='<circle class="pop" style="--d:.5s" cx="159" cy="'+Y(2)+'" r="22" fill="#20306A"/><circle class="pop" style="--d:.7s" cx="159" cy="'+Y(1)+'" r="22" fill="#fff" stroke="#6b7090" stroke-width="4" stroke-dasharray="6 5"/>';
+o+='<g class="a" style="--d:1.6s">'+T(159,Y(2)+50,'Wickbold (sem preço)',{a:'middle',s:18,w:700})+T(159,Y(1)+50,'Marcas próprias (Hipótese)',{a:'middle',s:18,w:700})+'</g>';
+o+='<path class="draw" pathLength="1" style="--d:2s;stroke-dasharray:.02 .02" d="M200 '+Y(5)+'H320" stroke="#D80000" stroke-width="4" fill="none"/>';
+o+='<g class="pop" style="--d:2.2s"><circle cx="159" cy="'+Y(5)+'" r="38" fill="#D80000" stroke="#fff" stroke-width="4"/><circle cx="159" cy="'+Y(5)+'" r="38" fill="none" stroke="#D80000" stroke-width="3" stroke-dasharray="7 6"><animate attributeName="r" values="38;50;38" dur="2.4s" repeatCount="indefinite"/></circle>'+T(159,Y(5)+9,'Panco',{a:'middle',f:'Alegreya Sans',w:900,s:26,c:'#fff'})+'</g>';
+o+='<g class="a" style="--d:2.6s">'+T(159,Y(5)+66,'preço a confirmar',{a:'middle',s:18,w:700,c:'#D80000'})+'</g>';
+o+='<g transform="translate(1130 514)"><circle r="7" fill="#20306A"/>'+T(14,6,'Bimbo',{s:16})+'<circle cx="86" r="7" fill="#1C8CD6"/>'+T(100,6,'Pandurata',{s:16})+'<circle cx="190" r="7" fill="#D80000"/>'+T(204,6,'Panco',{s:16})+'</g>';
+o+='</svg>';e.innerHTML=o;})();
+
+/* ---- jornada ---- */
+(function(){const e=$('#jr');if(!e)return;
+const rows=[['cup','Café da manhã','',['Reposição da semana','Bisnaguinha à vista, preço por porção','Preço por quilo, marca própria ao lado','Gôndola de pão ou ilha']],['slice','Lanche','n',['Impulso, porção','Porção individual perto do caixa','Não ver o produto','Caixa ou balcão']],['calendar','Natal','y',['Mesa e presente','Ponta temática, mini para experimentar','Excesso de oferta no corredor sazonal','Ponta de gôndola']]];
+let o='<div class="jr"><span></span>'+['Missão','Gatilho','Barreira','Decisão'].map(x=>'<span class="jh">'+x+'</span>').join('');
+rows.forEach((r,i)=>{o+='<div class="jl a" style="--d:'+(.6+i*.5)+'s">'+icon(r[0],46)+r[1]+'</div>';r[3].forEach((c,j)=>{o+='<div class="jc '+r[2]+' a" style="--d:'+(.8+i*.5+j*.12)+'s">'+c+'</div>';});});
+e.innerHTML=o+'</div>';})();
+
+/* ---- linhas de busca ---- */
+(function(){const e=$('#ch13');if(!e)return;
+const P=[74,63,77,69,78,81,71,68,94,88,100,80,63,79,77,84,84,69,70,74,70,77,74,73,87,89,70,77,75,74,69,72,72,80,71,70,63,60,67,66,83,85,74,73,79,77,78,73,74,81,81,77,66];
+const L=[56,55,58,62,55,60,60,61,49,49,51,51,54,51,55,54,52,59,50,53,56,54,56,71,56,45,47,47,47,49,46,57,55,53,50,49,57,56,49,48,51,56,50,49,60,57,55,54,49,56,52,45,40];
+const mo={0:'out/25',4:'nov',9:'dez',13:'jan',17:'fev',21:'mar',26:'abr',30:'mai',35:'jun',39:'jul',43:'ago',48:'set',52:'out/26'};
+const x=i=>70+i*(740/52),y=v=>330-v*3.1;
+const path=a=>a.map((v,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)).join('');
+let o='<svg class="fs" viewBox="0 0 880 400" style="width:880px" role="img" aria-label="Buscas por Panco e Pullman em 12 meses, com pico da Panco em 14/12/2025">';
+[0,50,100].forEach(v=>{o+='<line x1="70" x2="810" y1="'+y(v)+'" y2="'+y(v)+'" stroke="#20306A" stroke-opacity=".15" stroke-width="2"/>'+T(60,y(v)+5,String(v),{a:'end',s:15,c:'#6b7090'});});
+Object.keys(mo).forEach(i=>{o+=T(x(+i),372,mo[i],{a:'middle',s:15,c:'#6b7090'});});
+o+='<path class="draw" pathLength="1" style="--d:.6s" d="'+path(L)+'" fill="none" stroke="#9aa0b8" stroke-width="4" stroke-linejoin="round"/>';
+o+='<path class="draw" pathLength="1" style="--d:.9s;--to:0" d="'+path(P)+'" fill="none" stroke="#D80000" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>';
+o+='<g class="pop" style="--d:2.2s"><circle cx="'+x(10)+'" cy="'+y(100)+'" r="11" fill="#FBD72D" stroke="#D80000" stroke-width="4"/></g><g class="a" style="--d:2.4s">'+T(x(10)+18,y(100)+6,'14/12/2025: pico da Panco',{s:19,w:700,c:'#D80000'})+'</g>';
+o+='<g class="a" style="--d:2.2s">'+T(815,y(P[52])-8,'Panco',{s:20,w:800,c:'#D80000',a:'end'})+T(815,y(L[52])+22,'Pullman',{s:20,w:700,c:'#6b7090',a:'end'})+'</g>';
+o+='</svg>';e.innerHTML=o;
+const b=$('#ch13b');const D=[['SP',38,20],['RJ',31,9],['PR',25,18],['SC',15,22],['RS',7,24]];
+let q='<svg class="fs" viewBox="0 0 560 400" style="width:560px" role="img" aria-label="Peso nas buscas dentro de cada estado: Panco à frente em SP, RJ e PR; Pullman em SC e RS">';
+q+='<rect x="20" y="8" width="20" height="20" fill="#D80000" rx="4"/>'+T(48,25,'Panco',{s:18})+'<rect x="130" y="8" width="20" height="20" fill="#9aa0b8" rx="4"/>'+T(158,25,'Pullman',{s:18});
+D.forEach((d,i)=>{const yy=52+i*64;q+=T(14,yy+30,d[0],{f:'Alegreya Sans',w:900,s:30})+'<rect class="barx" style="--d:'+(.6+i*.2)+'s" x="70" y="'+yy+'" width="'+(d[1]*11)+'" height="26" rx="5" fill="#D80000"/>'+T(80+d[1]*11,yy+21,String(d[1]),{s:18,w:700,c:'#D80000'})+'<rect class="barx" style="--d:'+(.7+i*.2)+'s" x="70" y="'+(yy+30)+'" width="'+(d[2]*11)+'" height="22" rx="5" fill="#9aa0b8"/>'+T(80+d[2]*11,yy+48,String(d[2]),{s:17,w:700,c:'#6b7090'});});
+q+=T(14,392,'Compare só barras do mesmo estado.',{s:16,w:700,c:'#6b7090'})+'</svg>';b.innerHTML=q;})();
+
+/* ---- matriz ---- */
+(function(){const e=$('#ch16');if(!e)return;
+const X=v=>190+(v-1)*150,Y=v=>330-(v-1)*68;
+const P=[[1,'Ponta de Natal Panco',1,4],[2,'Bisnaguinha: valor por porção',3,5],[3,'Bolinho no caixa',1,3],[4,'Bloco vermelho do pão de forma',4,5],[5,'Frescor que se vê',2,3],[6,'Integral na janela da Nutrella',2,3],[7,'Pão no churrasco',1,2]];
+let o='<svg class="fs" viewBox="0 0 1420 400" style="width:1420px" role="img" aria-label="Matriz impacto por esforço das sete oportunidades">';
+o+='<rect x="110" y="40" width="190" height="150" rx="10" fill="#FBD72D" fill-opacity=".14"/>';
+for(let v=1;v<=5;v++){o+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="40" y2="350" stroke="#fff" stroke-opacity=".15" stroke-width="2"/><line x1="130" x2="810" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="#fff" stroke-opacity=".15" stroke-width="2"/>'+T(X(v),378,String(v),{a:'middle',s:17,c:'#fff'})+T(106,Y(v)+6,String(v),{a:'end',s:17,c:'#fff'});}
+o+=T(470,398,'Esforço (1 menor, 5 maior)',{a:'middle',s:18,w:700,c:'#fff'})+'<g transform="translate(40 200) rotate(-90)">'+T(0,0,'Impacto (1 menor, 5 maior)',{a:'middle',s:18,w:700,c:'#fff'})+'</g>';
+o+=T(120,34,'começar já',{s:17,w:700,c:'#FBD72D'});
+P.forEach((p,i)=>{const off=(p[0]===5?-24:p[0]===6?24:0);const top=p[0]<=3;
+o+='<g class="pop" style="--d:'+(.6+i*.35)+'s"><circle cx="'+(X(p[2])+off)+'" cy="'+Y(p[3])+'" r="'+(top?30:26)+'" fill="'+(top?'#D80000':'#fff')+'" fill-opacity="'+(top?1:.9)+'" stroke="'+(top?'#FBD72D':'#fff')+'" stroke-width="3"/>'+T(X(p[2])+off,Y(p[3])+9,String(p[0]),{a:'middle',f:'Alegreya Sans',w:900,s:28,c:top?'#fff':'#20306A'})+'</g>';
+o+='<g class="a" style="--d:'+(.9+i*.2)+'s">'+T(900,70+i*48,p[0]+' · '+p[1],{s:25,w:top?800:600,c:top?'#FBD72D':'#fff'})+'</g>';});
+o+='</svg>';e.innerHTML=o;})();
+
+/* ---- preço por kg ---- */
+(function(){const e=$('#ch18');if(!e)return;
+const R=[['Mini Bauducco 80 g',162.38,0],['Panco Trufado 550 g (Tenda Atacado)',61.64,1],['Visconti 400 g',47.48,0],['Tommy 400 g',42.48,0],['Panco mini 80 g',null,1]];
+let o='<svg class="fs" viewBox="0 0 1000 380" style="width:1000px" role="img" aria-label="Preço por quilo: mini Bauducco R$ 162,38; Panco Trufado 550 g R$ 61,64; Visconti 400 g R$ 47,48; Tommy 400 g R$ 42,48; mini Panco a confirmar">';
+R.forEach((r,i)=>{const yy=10+i*72;o+=T(330,yy+38,r[0],{a:'end',s:21,w:700,c:r[2]?'#D80000':'#20306A'});
+if(r[1]===null){o+='<rect class="barx" style="--d:'+(.5+i*.2)+'s" x="345" y="'+yy+'" width="500" height="52" rx="8" fill="none" stroke="#D80000" stroke-width="3" stroke-dasharray="9 7"/><g class="a" style="--d:1.6s">'+T(365,yy+34,'preço a confirmar',{s:22,w:700,c:'#D80000'})+'</g>';}
+else{const w=r[1]*3.2;o+='<rect class="barx" style="--d:'+(.5+i*.2)+'s" x="345" y="'+yy+'" width="'+w+'" height="52" rx="8" fill="'+(r[2]?'#D80000':'#8a8fa8')+'" fill-opacity="'+(r[2]?.9:1)+'"'+(r[2]?' stroke="#D80000" stroke-width="3" stroke-dasharray="9 7"':'')+'/><g class="a" style="--d:'+(1.2+i*.2)+'s">'+T(355+w,yy+36,'R$ '+fmtN(r[1],2)+'/kg',{s:23,w:800,c:r[2]?'#D80000':'#20306A'})+'</g>';}});
+o+=T(345,372,'tracejado: preço de loja online de terceiro, a confirmar com a Panco',{s:16,w:700,c:'#6b7090'});
+o+='</svg>';e.innerHTML=o;})();
+
+/* ---- esquema técnico ---- */
+(function(){const e=$('#ch19');if(!e)return;
+const k=.2105;let o='<svg class="fs" viewBox="0 0 1420 470" style="width:1420px" role="img" aria-label="Esquema técnico da ponta de 900 x 1.900 x 450 milímetros: frente, lateral e vista explodida">';
+const fx=100,fy=14,W=900*k,H=1900*k;
+o+=T(fx+W/2,fy+8,'',{})+'<g class="a f" style="--d:.4s">'+T(fx,462,'frente',{s:18,w:700,c:'#6b7090'})+T(420,462,'lateral',{s:18,w:700,c:'#6b7090'})+T(740,462,'vista explodida (ilustrativa)',{s:18,w:700,c:'#6b7090'})+'</g>';
+o+='<rect class="barx" style="--d:.5s" x="'+fx+'" y="'+fy+'" width="'+W+'" height="'+H+'" fill="#D80000" rx="3"/>';
+o+='<rect x="'+fx+'" y="'+fy+'" width="'+W+'" height="80" fill="#20306A"/><circle cx="'+(fx+50)+'" cy="'+(fy+40)+'" r="14" fill="#FBD72D"/><circle cx="'+(fx+130)+'" cy="'+(fy+24)+'" r="9" fill="#F43D3D"/>'+T(fx+W/2+20,fy+50,'testeira',{a:'middle',s:20,c:'#fff',w:700});
+[150,225,300,370].forEach((yy,i)=>{o+='<rect class="barx" style="--d:'+(.9+i*.15)+'s" x="'+(fx+12)+'" y="'+yy+'" width="'+(W-24)+'" height="9" fill="#FBD72D"/>'+T(fx+W/2,yy-14,'prateleira '+(i+1),{a:'middle',s:15,c:'#fff',w:700});});
+o+='<rect x="'+fx+'" y="'+(fy+H-14)+'" width="'+W+'" height="14" fill="#161B33"/>';
+o+='<line x1="'+fx+'" x2="'+(fx+W)+'" y1="440" y2="440" stroke="#20306A" stroke-width="2"/>'+T(fx+W/2,436,'900 mm',{a:'middle',s:20,w:800})+'<line x1="'+(fx-24)+'" x2="'+(fx-24)+'" y1="'+fy+'" y2="'+(fy+H)+'" stroke="#20306A" stroke-width="2"/><g transform="translate('+(fx-32)+' '+(fy+H/2)+') rotate(-90)">'+T(0,0,'1.900 mm',{a:'middle',s:20,w:800})+'</g>';
+const sx=420,D=450*k;
+o+='<rect class="barx" style="--d:.8s" x="'+sx+'" y="'+fy+'" width="'+D+'" height="'+H+'" fill="#F43D3D" rx="3"/><rect x="'+sx+'" y="'+fy+'" width="'+D+'" height="80" fill="#20306A"/>';
+o+='<line x1="'+sx+'" x2="'+(sx+D)+'" y1="440" y2="440" stroke="#20306A" stroke-width="2"/>'+T(sx+D/2,436,'450 mm',{a:'middle',s:20,w:800});
+const layers=[['Testeira','arte trocável','#20306A'],['Laterais','arte trocável','#D80000'],['Prateleiras','faixa de preço','#FBD72D'],['Estrutura','corpo da ponta','#8a8fa8'],['Base','rodízio opcional (a definir)','#161B33']];
+layers.forEach((l,i)=>{const yy=60+i*84;o+='<g class="a" style="--d:'+(1+i*.25)+'s"><path d="M690 '+yy+'h250l60 -30h-250z" fill="'+l[2]+'"/><path d="M690 '+yy+'h250v16h-250z" fill="'+l[2]+'" fill-opacity=".7"/>'+T(1030,yy-6,l[0],{s:23,w:800})+T(1030,yy+18,l[1],{s:18,c:'#6b7090'})+'</g>';if(i<4)o+='<path class="draw" pathLength="1" style="--d:'+(1.3+i*.25)+'s;stroke-dasharray:.04 .03" d="M690 '+(yy+16)+'V'+(yy+54)+'M940 '+(yy+16)+'V'+(yy+54)+'" stroke="#20306A" stroke-opacity=".5" stroke-width="2" fill="none"/>';});
+o+='</svg>';e.innerHTML=o;})();
+
+/* ---- planta da ilha ---- */
+(function(){const e=$('#ch20');if(!e)return;
+let o='<svg class="fs" viewBox="0 0 420 270" style="width:100%" role="img" aria-label="Planta ilustrativa da ilha: bisnaguinha à esquerda e panetone à direita">';
+o+='<rect class="barx" style="--d:1.2s" x="70" y="50" width="280" height="150" rx="10" fill="#FBD72D"/><rect x="70" y="50" width="190" height="150" rx="10" fill="#D80000"/><rect x="260" y="50" width="90" height="150" fill="#20306A"/>';
+o+=T(165,120,'Bisnaguinha',{a:'middle',f:'Alegreya Sans',w:900,s:26,c:'#fff'})+T(165,148,'o ano todo',{a:'middle',s:16,c:'#fff'})+T(305,120,'Panetone',{a:'middle',f:'Alegreya Sans',w:900,s:22,c:'#fff'})+T(305,146,'Natal',{a:'middle',s:16,c:'#fff'});
+o+='<path class="draw" pathLength="1" style="--d:1.6s" d="M40 225H380M40 25H380" stroke="#20306A" stroke-width="3" fill="none" stroke-dasharray=".03 .03"/>';
+o+=T(210,255,'circulação do shopper · medidas a definir',{a:'middle',s:16,w:700})+T(210,18,'planta ilustrativa (vista de cima)',{a:'middle',s:16,w:700});
+o+='</svg>';e.innerHTML=o;})();
+
+/* ---- ecossistema ---- */
+(function(){const s=$('#eco');if(!s)return;const c=[400,320],R=225;
+const N=[['Shopper','acha a ocasião mais rápido','#D80000'],['Marca','vermelho Panco em bloco','#20306A'],['Varejo','giro no regional','#1C8CD6'],['Operação','troca só a arte','#C89B00'],['Dados','sell-out por loja','#20306A']];
+let o='';N.forEach((n,i)=>{const a=(-90+i*72)*Math.PI/180;n.x=c[0]+R*Math.cos(a);n.y=c[1]+R*Math.sin(a);o+='<path class="draw" pathLength="1" style="--d:'+(.6+i*.25)+'s" d="M'+c[0]+' '+c[1]+'L'+n.x.toFixed(1)+' '+n.y.toFixed(1)+'" stroke="#20306A" stroke-opacity=".5" stroke-width="3" fill="none"/>';});
+N.forEach((n,i)=>{const nx=N[(i+1)%5];o+='<path class="draw" pathLength="1" style="--d:'+(1.6+i*.2)+'s;stroke-dasharray:.02 .02" d="M'+n.x.toFixed(1)+' '+n.y.toFixed(1)+'L'+nx.x.toFixed(1)+' '+nx.y.toFixed(1)+'" stroke="#D80000" stroke-width="2" fill="none"/>';});
+o+='<g class="pop" style="--d:.4s"><circle cx="'+c[0]+'" cy="'+c[1]+'" r="86" fill="#D80000"/>'+T(c[0],c[1]-4,'Ponta de Natal',{a:'middle',f:'Alegreya Sans',w:900,s:27,c:'#fff'})+T(c[0],c[1]+26,'Panco',{a:'middle',f:'Alegreya Sans',w:900,s:34,c:'#FBD72D'})+'</g>';
+N.forEach((n,i)=>{o+='<g class="pop" style="--d:'+(.9+i*.25)+'s"><circle cx="'+n.x.toFixed(1)+'" cy="'+n.y.toFixed(1)+'" r="62" fill="'+n[2]+'"/>'+T(n.x.toFixed(1),(n.y+9).toFixed(1),n[0],{a:'middle',f:'Alegreya Sans',w:900,s:28,c:n[2]==='#C89B00'?'#161B33':'#fff'})+'</g><g class="a" style="--d:'+(1.4+i*.25)+'s">'+T(n.x.toFixed(1),(n.y+(i===0?-80:86)).toFixed(1),n[1],{a:'middle',s:19,w:700,x:' paint-order="stroke" stroke="#F2F1D3" stroke-width="7"'})+'</g>';});
+s.innerHTML=o;})();
+
+/* ---- piloto ---- */
+(function(){const s=$('#pil');if(!s)return;let o='';
+for(let i=0;i<4;i++){const x=120+i*215;
+o+='<path class="draw" pathLength="1" style="--d:'+(1+i*.2)+'s;stroke-dasharray:.03 .03" d="M'+x+' 130V260" stroke="#FBD72D" stroke-width="3" fill="none"/>';
+o+='<g class="pop" style="--d:'+(.4+i*.2)+'s"><circle cx="'+x+'" cy="90" r="48" fill="#F43D3D" stroke="#fff" stroke-width="4"/><circle cx="'+x+'" cy="90" r="48" fill="none" stroke="#FBD72D" stroke-width="3"><animate attributeName="r" values="48;66;48" dur="2.6s" begin="'+(i*.4)+'s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0;.9" dur="2.6s" begin="'+(i*.4)+'s" repeatCount="indefinite"/></circle>'+T(x,100,'P'+(i+1),{a:'middle',f:'Alegreya Sans',w:900,s:34,c:'#fff'})+'</g>';
+o+='<g class="pop" style="--d:'+(.7+i*.2)+'s"><circle cx="'+x+'" cy="300" r="48" fill="#8a8fa8" stroke="#fff" stroke-width="4"/>'+T(x,310,'C'+(i+1),{a:'middle',f:'Alegreya Sans',w:900,s:34,c:'#161B33'})+'</g>';}
+o+='<g class="a" style="--d:1.8s">'+T(120,382,'P: piloto, com a ponta',{s:19,w:700,c:'#fff'})+T(560,382,'C: controle, loja parecida sem a ponta (exemplo)',{s:19,w:700,c:'#fff'})+'</g>';
+s.innerHTML=o;})();
+
+/* ---- one shot dots ---- */
+(function(){const g=$('#os-dots');if(!g)return;let o='';for(let i=0;i<6;i++){const x=Math.round(1420/6*i+1420/12);o+='<g class="pop" style="--d:'+(.9+i*.2)+'s"><circle cx="'+x+'" cy="30" r="13" fill="#FBD72D" stroke="#D80000" stroke-width="5"/></g>';}g.innerHTML=o;})();
+
+/* ---- on timing ---- */
+(function(){const e=$('#ot');if(!e)return;
+const S=[['gondola','DISPLAY / ATIVAÇÃO','Ponta de Natal Panco na loja'],['cam','CAPTAÇÃO','Foto e QR do promotor, a cada visita'],['phone','TRANSMISSÃO','Formulário enviado pelo celular'],['store','PLATAFORMA','Painel 75 LAB'],['data','DADOS','Frentes, ruptura e sell-out'],['lupa','INSIGHTS','O que vende e onde falha'],['target','DECISÃO','Repor, corrigir ou trocar a arte']];
+let o='<div id="otl"></div><div id="otd"></div>';S.forEach((s,i)=>{o+='<div class="ots a" style="--d:'+(.6+i*.3)+'s"><span class="nm">'+icon(s[0],38)+'</span><div><b>'+s[1]+'</b><p>'+s[2]+'</p></div></div>';});e.innerHTML=o;})();
+
+/* ---- cronograma ---- */
+(function(){const e=$('#gt');if(!e)return;
+const d0=new Date(2026,9,13),dd=d=>Math.round((d-d0)/864e5);const D=dd(new Date(2027,0,15))+1;const X=d=>340+(dd(d))*(1050/D);
+const mk=(d,m)=>new Date(2026,m-1,d);const mk2=(d,m,y)=>new Date(y,m-1,d);
+const F=[['1 · Apresentação e alinhamento','75 LAB e Panco',mk(13,10),mk(16,10),'#FBD72D','13/10 a 16/10'],['2 · Arte de Natal e preço','75 LAB e Panco',mk(19,10),mk(23,10),'#FBD72D','19/10 a 23/10'],['3 · Aprovação','Panco e rede',mk(26,10),mk(30,10),'#FBD72D','26/10 a 30/10'],['4 · Produção','fornecedor, a confirmar',mk(3,11),mk(13,11),'#F43D3D','03/11 a 13/11'],['5 · Implantação + One Shot','promotor e 75 LAB',mk(16,11),mk(23,11),'#FFFFFF','16/11 a 23/11'],['6 · On Timing','promotor, 75 LAB, Panco',mk(23,11),mk(31,12),'#1C8CD6','23/11 a 31/12'],['7 · Leitura e troca de arte','75 LAB e Panco',mk2(4,1,2027),mk2(15,1,2027),'#FBD72D','04/01 a 15/01/2027']];
+let o='<svg class="fs" viewBox="0 0 1420 500" style="width:1420px" role="img" aria-label="Cronograma de 13/10/2026 a 15/01/2027 com sete fases e marcos">';
+o+='<rect class="a f" style="--d:1.5s" x="'+X(mk(14,12))+'" y="76" width="'+(X(mk(25,12))-X(mk(14,12)))+'" height="370" fill="#FBD72D" fill-opacity=".16"/>';
+F.forEach((f,i)=>{const yy=96+i*50;const x1=X(f[2]),x2=X(new Date(f[3].getTime()+864e5));
+o+=T(20,yy+20,f[0],{s:20,w:700,c:'#fff'})+T(20,yy+40,f[1],{s:15,c:'#cfd3ea'});
+o+='<rect class="barx" style="--d:'+(.5+i*.25)+'s" x="'+x1+'" y="'+yy+'" width="'+(x2-x1)+'" height="34" rx="8" fill="'+f[4]+'"/>'+'<g class="a" style="--d:'+(.9+i*.25)+'s">'+T(x2+10,yy+25,f[5],{s:16,w:700,c:'#fff'})+'</g>';});
+const M=[[mk(30,10),'Decisão 30/10',0],[mk(27,11),'Relatório One Shot 27/11',1],[mk(11,12),'Leitura parcial 11/12',0],[mk(25,12),'Natal 25/12',1]];
+M.forEach((m,i)=>{const x=X(m[0])+ (1050/D)/2;o+='<line class="draw" pathLength="1" style="--d:'+(1.8+i*.2)+'s" x1="'+x+'" x2="'+x+'" y1="'+(m[2]?44:30)+'" y2="450" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="1 1"/><g class="pop" style="--d:'+(1.8+i*.2)+'s"><path d="M'+x+' '+(m[2]?40:26)+'l11 11 -11 11 -11 -11z" fill="#D80000" stroke="#fff" stroke-width="3"/>'+(i===3?'<circle cx="'+x+'" cy="'+(m[2]?51:37)+'" r="14" fill="none" stroke="#FBD72D" stroke-width="3"><animate attributeName="r" values="14;30;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/></circle>':'')+'</g><g class="a" style="--d:'+(2+i*.2)+'s">'+T(x,m[2]?24:12,m[1],{a:'middle',s:17,w:800,c:'#FBD72D'})+'</g>';});
+o+=T(X(mk(14,12))+(X(mk(25,12))-X(mk(14,12)))/2,470,'pico de Natal: 14/12 a 24/12',{a:'middle',s:17,w:700,c:'#FBD72D'});
+o+='</svg>';e.innerHTML=o;})();
+
+/* ---- calendário dez/2026 ---- */
+(function(){const e=$('#cal');if(!e)return;
+let o='<svg viewBox="0 0 280 200" style="width:100%" role="img" aria-label="Dezembro de 2026 com o pico de 14 a 24 de dezembro e Natal em 25">';
+'DSTQQSS'.split('').forEach((l,i)=>{o+=T(20+i*40,16,l,{a:'middle',s:15,w:700,c:'#6b7090'});});
+for(let d=1;d<=31;d++){const idx=d+1;const c=idx%7,r=Math.floor(idx/7);const x=20+c*40,y=44+r*30;const pico=d>=14&&d<=24;
+if(pico)o+='<rect x="'+(x-18)+'" y="'+(y-18)+'" width="36" height="26" rx="6" fill="#FBD72D"/>';
+if(d===25)o+='<circle cx="'+x+'" cy="'+(y-5)+'" r="15" fill="#D80000"><animate attributeName="r" values="15;18;15" dur="2s" repeatCount="indefinite"/></circle>';
+o+=T(x,y+1,String(d),{a:'middle',s:15,w:d===25?800:600,c:d===25?'#fff':'#20306A'});}
+e.innerHTML=o+'</svg>';})();
+
+/* ---- odômetro ---- */
+$$('.odo[data-v]').forEach(el=>{let o='';[...el.dataset.v].forEach((ch,i)=>{if(/\d/.test(ch)){let st='';for(let n=0;n<=9;n++)st+=n+'<br>';o+='<span class="dg"><span class="st2" style="--n:'+ch+';--j:'+i+'">'+st+'</span></span>'}else o+='<span>'+ch+'</span>'});el.innerHTML=o;el.setAttribute('role','img');el.setAttribute('aria-label',el.dataset.v)});
+
+/* ---- texto cinético ---- */
+$$('[data-kin]').forEach(el=>{const t=el.textContent.trim().split(/\s+/);el.setAttribute('aria-label',t.join(' '));el.innerHTML=t.map((w,i)=>'<span class="w" aria-hidden="true" style="--i:'+i+'"><span>'+w+'</span></span>').join(' ')});
+$$('[data-type]').forEach(el=>{const t=el.textContent.trim().split(/\s+/);el.setAttribute('aria-label',t.join(' '));let n=0;el.innerHTML=t.map(w=>'<span aria-hidden="true" style="display:inline-block;white-space:nowrap">'+[...w].map(c=>'<span style="--i:'+(n++)+'">'+c+'</span>').join('')+'</span>').join(' ')});
+
+/* ---- motor ---- */
+const stage=$('#stage'),slides=$$('.s'),N=slides.length;let cur=0,started=false,mob=false,lock=0;const flat=!!navigator.webdriver||/[?&]flat/.test(location.search);
+function fit(){if(flat){document.body.classList.add('flat');return}mob=innerWidth<860;document.body.classList.toggle('mob',mob);if(!mob){const k=Math.min(innerWidth/1600,innerHeight/900);stage.style.transform='translate(-50%,-50%) scale('+k+')'}else stage.style.transform=''}
+function cu(el,delay){const to=+el.dataset.to,dec=+(el.dataset.dec||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'';const f=v=>pre+fmtN(v,dec)+suf;
+ if(reduce||mob||flat){el.textContent=f(to);return}
+ el.textContent=f(0);const t0=performance.now()+delay*1000,dur=+(el.dataset.dur||1700);
+ (function r(t){if(t<t0){requestAnimationFrame(r);return}const p=Math.min(1,(t-t0)/dur);el.textContent=f(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(r)})(performance.now())}
+function enter(s){$$('.cu',s).forEach(el=>{let d=.3;const p=el.closest('.a');if(p)d=parseFloat(p.style.getPropertyValue('--d'))||0;cu(el,d)})}
+function go(n){if(n<0||n>=N)return;if(mob){slides[n].scrollIntoView({behavior:'smooth'});return}
+ if(started&&n===cur)return;const prev=slides[cur];slides.forEach(s=>s.classList.remove('out'));
+ if(started){prev.classList.remove('on');prev.classList.add('out');setTimeout(()=>prev.classList.remove('out'),1000)}
+ cur=n;const s=slides[n];s.classList.add('on');started=true;
+ document.body.className=document.body.className.replace(/th-\w+/g,'').trim()+' th-'+s.dataset.th;
+ $('#ct').textContent=String(n+1).padStart(2,'0')+' / '+N;$('#pg').style.width=((n+1)/N*100)+'%';history.replaceState(null,'','#'+(n+1));enter(s)}
+const next=()=>go(cur+1),prev=()=>go(cur-1);
+document.addEventListener('keydown',e=>{
+ if($('#lb').classList.contains('open')){if(e.key==='Escape')lbClose();else if(e.key==='ArrowRight')lbStep(1);else if(e.key==='ArrowLeft')lbStep(-1);return}
+ if(e.key==='Escape'){$('#chp').classList.remove('open');return}
+ if(['ArrowRight','ArrowDown','PageDown'].includes(e.key)||(e.key===' '&&!/BUTTON/.test(e.target.tagName))){e.preventDefault();next()}
+ else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev()}
+ else if(e.key==='Home')go(0);else if(e.key==='End')go(N-1);
+ else if((e.key==='Enter')&&e.target.dataset&&e.target.dataset.go)go(+e.target.dataset.go-1);
+ else if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('flip'))e.target.classList.toggle('f')});
+$('#nx').onclick=next;$('#pv').onclick=prev;
+addEventListener('wheel',e=>{if(mob||$('#lb').classList.contains('open'))return;const t=Date.now();if(t-lock<1000||Math.abs(e.deltaY)<30)return;lock=t;e.deltaY>0?next():prev()},{passive:true});
+let tx=0,ty=0;addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+addEventListener('touchend',e=>{if(mob||$('#lb').classList.contains('open'))return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.3)dx<0?next():prev()},{passive:true});
+document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g){go(+g.dataset.go-1);return}
+ const f=e.target.closest('.flip');if(f)f.classList.toggle('f');
+ const z=e.target.closest('[data-zoom]');if(z)lbOpen(z);
+ if(!e.target.closest('#chp,#chb'))$('#chp').classList.remove('open')});
+/* capítulos */
+(function(){const seen={};let o='';slides.forEach((s,i)=>{const c=s.dataset.ch;if(!seen[c]){seen[c]=1;o+='<button data-go="'+(i+1)+'"><b>'+String(i+1).padStart(2,'0')+'</b>'+c+'</button>'}});$('#chl').innerHTML=o;
+ $('#chb').onclick=e=>{e.stopPropagation();const p=$('#chp');p.classList.toggle('open');$('#chb').setAttribute('aria-expanded',p.classList.contains('open'))}})();
+/* lightbox */
+let grp=[],gi=0;
+function lbShow(){const el=grp[gi];const c=$('#lbc');
+ if(el.tagName==='IMG'){c.innerHTML='<img src="'+el.currentSrc+'" alt="'+(el.alt||'')+'">'}else{const sv=el.querySelector('svg');c.innerHTML='<div class="zs on">'+(sv?sv.outerHTML:'')+'</div>'}
+ $('#lbt').textContent=el.dataset.cap||el.alt||'';const multi=grp.length>1;$('#lbp').style.display=$('#lbn').style.display=multi?'':'none'}
+function lbOpen(el){const g=el.dataset.g;grp=g?$$('[data-zoom][data-g="'+g+'"]').filter(x=>!(mob&&x.offsetParent===null)):[el];gi=Math.max(0,grp.indexOf(el));lbShow();$('#lb').classList.add('open');$('#lbx').focus()}
+function lbClose(){$('#lb').classList.remove('open');$('#lbc').innerHTML=''}
+function lbStep(d){gi=(gi+d+grp.length)%grp.length;lbShow()}
+$('#lbx').onclick=lbClose;$('#lbp').onclick=e=>{e.stopPropagation();lbStep(-1)};$('#lbn').onclick=e=>{e.stopPropagation();lbStep(1)};
+$('#lb').addEventListener('click',e=>{if(e.target.id==='lb'||e.target.id==='lbc')lbClose()});
+/* cursor */
+if(matchMedia('(pointer:fine)').matches){document.body.classList.add('hc');const cr=$('#cr'),cd=$('#cd');let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+ addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.transform='translate('+mx+'px,'+my+'px)';
+  const t=e.target;cr.classList.toggle('big',!!t.closest('[data-zoom]'));cr.classList.toggle('hov',!t.closest('[data-zoom]')&&!!t.closest('button,[data-go],.flip,.mag'));
+  const m=t.closest('.mag');if(m&&m.tagName==='BUTTON'){const b=m.getBoundingClientRect();m.style.transform='translate('+((mx-(b.left+b.width/2))*.25)+'px,'+((my-(b.top+b.height/2))*.25)+'px)'}});
+ addEventListener('mouseout',e=>{const m=e.target.closest&&e.target.closest('button.mag');if(m)m.style.transform=''});
+ (function lp(){rx+=(mx-rx)*.22;ry+=(my-ry)*.22;cr.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(lp)})()}
+/* mobile: contagem ao aparecer, contador */
+addEventListener('resize',fit);fit();
+if(flat){const hd=$('#hd');hd.classList.add('top');slides.forEach(s=>{s.classList.add('on');const c=hd.cloneNode(true);c.removeAttribute('id');c.className='hdc';const cb=c.querySelector('#chb');if(cb)cb.remove();s.appendChild(c);});['#chp','#nv','#pg'].forEach(q=>{const x=$(q);if(x)x.remove()});$$('img[loading]').forEach(i=>i.removeAttribute('loading'));$$('.cu').forEach(el=>cu(el,0))}
+else if(mob){slides.forEach(s=>s.classList.add('on'))}
+else{const h=parseInt((location.hash||'').slice(1))||1;go(Math.min(Math.max(h-1,0),N-1))}
+if(mob){$$('.cu').forEach(el=>cu(el,0))}
+window.__deck={go,N};
+})();
+</script>
+
+</body>
+</html>
