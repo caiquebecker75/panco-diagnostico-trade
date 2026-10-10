@@ -30,7 +30,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @keyframes trWipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
 @keyframes trUp{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes trSlide{from{opacity:0;transform:translateX(120px)}to{opacity:1;transform:none}}
-.in{position:absolute;inset:0;padding:130px 90px 100px;display:flex;flex-direction:column;z-index:2}
+.in{position:absolute;inset:0;padding:130px 90px 100px;display:flex;flex-direction:column;z-index:2;pointer-events:none}
+.in>*{pointer-events:auto}
 .bgd{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
 .bgd i{position:absolute;border-radius:50%;opacity:.13;animation:fl 14s ease-in-out infinite alternate}
 .cream .bgd i:nth-child(odd){background:var(--red2)}.cream .bgd i:nth-child(even){background:var(--yel)}
@@ -98,7 +99,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #hd>*{pointer-events:auto}
 #hd .lp{height:54px;width:auto}
 #hd .r{display:flex;align-items:center;gap:26px;margin-top:8px}
-#hd .l75{height:30px;width:auto}
+#hd .l75{height:38px;width:auto}
 .l75w{display:none}.th-red .l75b,.th-navy .l75b{display:none}.th-red .l75w,.th-navy .l75w{display:block}
 #chb{font:700 15px var(--bd);letter-spacing:.14em;text-transform:uppercase;border:2px solid currentColor;border-radius:99px;padding:8px 16px}
 .th-red #hd,.th-navy #hd{color:#fff}.th-cream #hd,.th-yel #hd{color:var(--navy)}
@@ -240,7 +241,7 @@ body.mob .nd b{font-size:34px}
  <div class="in">
   <div class="k a">O que vamos discutir hoje</div>
   <h2 class="t" data-kin>Uma história em 5 passos: da gôndola concentrada ao Natal medido loja a loja.</h2>
-  <svg class="fs" viewBox="0 0 1420 400" style="width:1420px;margin-top:30px" role="img" aria-label="Trilha de 5 paradas: leitura, mercado, shopper, caminho e prova">
+  <svg class="fs" viewBox="0 0 1420 400" style="width:1420px;margin-top:30px;overflow:visible" role="img" aria-label="Trilha de 5 paradas: leitura, mercado, shopper, caminho e prova">
    <path class="draw" pathLength="1" style="--d:.5s" d="M30 250 C 200 250 220 120 330 120 S 480 250 620 250 S 760 120 900 120 S 1040 250 1180 250 S 1300 150 1360 150" fill="none" stroke="#D80000" stroke-width="6" stroke-dasharray="1" stroke-linecap="round"/>
    <g class="stops"></g>
   </svg>
@@ -805,12 +806,12 @@ s.innerHTML=o;})();
 /* ---- gráfico 5 ---- */
 (function(){const e=$('#ch5');if(!e)return;const z=170,k=38;
 const bars=[[215,1.1,'v'],[395,-3.9,'q'],[815,3.5,'v'],[995,-3.4,'q']];
-let o='<svg class="fs" viewBox="0 0 1400 380" style="width:1400px" role="img" aria-label="Pão: valor +1,1% e volume -3,9%. Panetone: valor +3,5% e volume -3,4%">';
+let o='<svg class="fs" viewBox="0 0 1400 440" style="width:1400px" role="img" aria-label="Pão: valor +1,1% e volume -3,9%. Panetone: valor +3,5% e volume -3,4%">';
 o+='<line x1="60" x2="1340" y1="'+z+'" y2="'+z+'" stroke="#20306A" stroke-width="2"/>';
 bars.forEach((b,i)=>{const hgt=Math.abs(b[1])*k;const pos=b[1]>0;const col=b[2]==='v'?'#20306A':'#D80000';
 o+='<rect class="'+(pos?'bar':'barn')+'" style="--d:'+(.5+i*.25)+'s" x="'+b[0]+'" y="'+(pos?z-hgt:z)+'" width="150" height="'+hgt+'" fill="'+col+'" rx="6"/>';
 o+='<g class="a f" style="--d:'+(1.1+i*.25)+'s">'+T(b[0]+75,pos?z-hgt-12:z+hgt+30,(pos?'+':'-')+fmtN(Math.abs(b[1]),1)+'%',{a:'middle',f:'Alegreya Sans',w:900,s:42,c:col})+'</g>';});
-o+=T(395,360,'Pão industrializado · 1º sem. 2026',{a:'middle',s:23,w:700})+T(995,360,'Panetone · safra 2025/26',{a:'middle',s:23,w:700});
+o+=T(380,428,'Pão industrializado · 1º sem. 2026',{a:'middle',s:23,w:700})+T(980,428,'Panetone · safra 2025/26',{a:'middle',s:23,w:700});
 o+='<rect x="1090" y="14" width="22" height="22" fill="#20306A" rx="4"/>'+T(1122,32,'Valor (R$)',{s:20})+'<rect x="1090" y="48" width="22" height="22" fill="#D80000" rx="4"/>'+T(1122,66,'Volume (quilos)',{s:20});
 o+='</svg>';e.innerHTML=o;})();
 
@@ -950,7 +951,7 @@ F.forEach((f,i)=>{const yy=96+i*50;const x1=X(f[2]),x2=X(new Date(f[3].getTime()
 o+=T(20,yy+20,f[0],{s:20,w:700,c:'#fff'})+T(20,yy+40,f[1],{s:15,c:'#cfd3ea'});
 o+='<rect class="barx" style="--d:'+(.5+i*.25)+'s" x="'+x1+'" y="'+yy+'" width="'+(x2-x1)+'" height="34" rx="8" fill="'+f[4]+'"/>'+'<g class="a" style="--d:'+(.9+i*.25)+'s">'+T(x2+10,yy+25,f[5],{s:16,w:700,c:'#fff'})+'</g>';});
 const M=[[mk(30,10),'Decisão 30/10',0],[mk(27,11),'Relatório One Shot 27/11',1],[mk(11,12),'Leitura parcial 11/12',0],[mk(25,12),'Natal 25/12',1]];
-M.forEach((m,i)=>{const x=X(m[0])+ (1050/D)/2;o+='<line class="draw" pathLength="1" style="--d:'+(1.8+i*.2)+'s" x1="'+x+'" x2="'+x+'" y1="'+(m[2]?44:30)+'" y2="450" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="1 1"/><g class="pop" style="--d:'+(1.8+i*.2)+'s"><path d="M'+x+' '+(m[2]?40:26)+'l11 11 -11 11 -11 -11z" fill="#D80000" stroke="#fff" stroke-width="3"/>'+(i===3?'<circle cx="'+x+'" cy="'+(m[2]?51:37)+'" r="14" fill="none" stroke="#FBD72D" stroke-width="3"><animate attributeName="r" values="14;30;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/></circle>':'')+'</g><g class="a" style="--d:'+(2+i*.2)+'s">'+T(x,m[2]?24:12,m[1],{a:'middle',s:17,w:800,c:'#FBD72D'})+'</g>';});
+M.forEach((m,i)=>{const x=X(m[0])+ (1050/D)/2;o+='<line class="draw" pathLength="1" style="--d:'+(1.8+i*.2)+'s" x1="'+x+'" x2="'+x+'" y1="'+(m[2]?44:30)+'" y2="450" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="1 1"/><g class="pop" style="--d:'+(1.8+i*.2)+'s"><path d="M'+x+' '+(m[2]?40:26)+'l11 11 -11 11 -11 -11z" fill="#D80000" stroke="#fff" stroke-width="3"/>'+(i===3?'<circle cx="'+x+'" cy="'+(m[2]?51:37)+'" r="14" fill="none" stroke="#FBD72D" stroke-width="3"><animate attributeName="r" values="14;30;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/></circle>':'')+'</g><g class="a" style="--d:'+(2+i*.2)+'s">'+T([x,x-10,x+10,x+18][i],[12,12,12,36][i],m[1],{a:['middle','end','start','start'][i],s:17,w:800,c:'#FBD72D'})+'</g>';});
 o+=T(X(mk(14,12))+(X(mk(25,12))-X(mk(14,12)))/2,470,'pico de Natal: 14/12 a 24/12',{a:'middle',s:17,w:700,c:'#FBD72D'});
 o+='</svg>';e.innerHTML=o;})();
 
