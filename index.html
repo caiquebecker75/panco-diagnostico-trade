@@ -974,7 +974,7 @@ $$('[data-type]').forEach(el=>{const t=el.textContent.trim().split(/\s+/);el.set
 
 /* ---- motor ---- */
 const stage=$('#stage'),slides=$$('.s'),N=slides.length;let cur=0,started=false,mob=false,lock=0;const flat=!!navigator.webdriver||/[?&]flat/.test(location.search);
-function fit(){if(flat){document.body.classList.add('flat');return}mob=innerWidth<860;document.body.classList.toggle('mob',mob);if(!mob){const k=Math.min(innerWidth/1600,innerHeight/900);stage.style.transform='translate(-50%,-50%) scale('+k+')'}else stage.style.transform=''}
+function fit(){if(flat){document.body.classList.add('flat');return}mob=Math.min(innerWidth,screen.width||innerWidth,document.documentElement.clientWidth||innerWidth)<860;document.body.classList.toggle('mob',mob);if(!mob){const k=Math.min(innerWidth/1600,innerHeight/900);stage.style.transform='translate(-50%,-50%) scale('+k+')'}else stage.style.transform=''}
 function cu(el,delay){const to=+el.dataset.to,dec=+(el.dataset.dec||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'';const f=v=>pre+fmtN(v,dec)+suf;
  if(reduce||mob||flat){el.textContent=f(to);return}
  el.textContent=f(0);const t0=performance.now()+delay*1000,dur=+(el.dataset.dur||1700);
