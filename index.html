@@ -30,8 +30,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @keyframes trWipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
 @keyframes trUp{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes trSlide{from{opacity:0;transform:translateX(120px)}to{opacity:1;transform:none}}
-.in{position:absolute;inset:0;padding:130px 90px 100px;display:flex;flex-direction:column;z-index:2;pointer-events:none}
-.in>*{pointer-events:auto}
+.in{position:absolute;inset:0;padding:130px 90px 100px;display:flex;flex-direction:column;z-index:2}
 .bgd{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
 .bgd i{position:absolute;border-radius:50%;opacity:.13;animation:fl 14s ease-in-out infinite alternate}
 .cream .bgd i:nth-child(odd){background:var(--red2)}.cream .bgd i:nth-child(even){background:var(--yel)}
@@ -99,7 +98,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #hd>*{pointer-events:auto}
 #hd .lp{height:54px;width:auto}
 #hd .r{display:flex;align-items:center;gap:26px;margin-top:8px}
-#hd .l75{height:38px;width:auto}
+#hd .l75{height:30px;width:auto}
 .l75w{display:none}.th-red .l75b,.th-navy .l75b{display:none}.th-red .l75w,.th-navy .l75w{display:block}
 #chb{font:700 15px var(--bd);letter-spacing:.14em;text-transform:uppercase;border:2px solid currentColor;border-radius:99px;padding:8px 16px}
 .th-red #hd,.th-navy #hd{color:#fff}.th-cream #hd,.th-yel #hd{color:var(--navy)}
@@ -174,7 +173,7 @@ body.hc #cr{display:flex}
 /* mobile */
 body.mob #stage{position:static;width:auto;height:auto;transform:none!important;overflow:visible}
 body.mob .s{position:relative;visibility:visible!important;opacity:1!important;overflow:hidden;animation:none!important;clip-path:none!important}
-body.mob .in{position:relative;padding:96px 20px 56px!important}
+body.mob .in{position:relative;padding:96px 20px 56px}
 body.mob .a,body.mob .pop{opacity:1!important;animation:none!important;transform:none!important}
 body.mob .draw{stroke-dashoffset:var(--to)!important;animation:none!important}
 body.mob .bar,body.mob .barn,body.mob .barx{transform:none!important;animation:none!important}
@@ -241,7 +240,7 @@ body.mob .nd b{font-size:34px}
  <div class="in">
   <div class="k a">O que vamos discutir hoje</div>
   <h2 class="t" data-kin>Uma história em 5 passos: da gôndola concentrada ao Natal medido loja a loja.</h2>
-  <svg class="fs" viewBox="0 0 1420 400" style="width:1420px;margin-top:30px;overflow:visible" role="img" aria-label="Trilha de 5 paradas: leitura, mercado, shopper, caminho e prova">
+  <svg class="fs" viewBox="0 0 1420 400" style="width:1420px;margin-top:30px" role="img" aria-label="Trilha de 5 paradas: leitura, mercado, shopper, caminho e prova">
    <path class="draw" pathLength="1" style="--d:.5s" d="M30 250 C 200 250 220 120 330 120 S 480 250 620 250 S 760 120 900 120 S 1040 250 1180 250 S 1300 150 1360 150" fill="none" stroke="#D80000" stroke-width="6" stroke-dasharray="1" stroke-linecap="round"/>
    <g class="stops"></g>
   </svg>
@@ -300,7 +299,7 @@ body.mob .nd b{font-size:34px}
   <div class="k a">Contexto · consumo</div>
   <h2 class="t" data-kin>O shopper paga mais e leva menos: o pão e o panetone repetem o movimento.</h2>
   <p class="sub a" style="--d:.4s">Pão no 1º semestre de 2026: valor sobe 1,1%, volume cai 3,9%. Panetone 2025/26: valor sobe 3,5%, volume cai 3,4%.</p>
-  <div id="ch5" class="zsvg" data-zoom data-g="gr" data-cap="Valor x volume: pão (1º sem. 2026) e panetone (2025/26)" style="margin-top:0;transform:scale(.9);transform-origin:left top"></div>
+  <div id="ch5" class="zsvg" data-zoom data-g="gr" data-cap="Valor x volume: pão (1º sem. 2026) e panetone (2025/26)" style="margin-top:6px"></div>
  </div>
  <p class="src">Fontes: Abimapi/NielsenIQ via Mercado &amp; Consumo, 25/08/2026; Worldpanel by Numerator para Abimapi via SuperVarejo, 27/08/2026.</p>
 </section>
@@ -323,7 +322,7 @@ body.mob .nd b{font-size:34px}
   </div>
   <p class="sub a" style="--d:1s;margin-top:0">A Bimbo comprou a Wickbold e a Seven Boys e soma Pullman, Plusvita e Ana Maria.</p>
  </div>
- <p class="src">Fonte: relatora do caso no Cade, via InvestNews, 17/09/2025. Estimativa do Cade, não é dado de loja.</p>
+ <p class="src">Fonte: relatora do caso no Cade, via InvestNews, 17/09/2025. Estimativa do Cade, não é dado de loja. Nutrella, que era da Bimbo, ficou fora do desenho: foi vendida por exigência do Cade (decisão de 18/09/2025; leilão em 24/07/2026, comprador em sigilo).</p>
 </section>
 
 <!-- 7 CONCORRÊNCIA -->
@@ -380,20 +379,20 @@ body.mob .nd b{font-size:34px}
  <div class="bgd"><i style="width:420px;height:420px;left:-100px;top:-120px"></i><i style="width:160px;height:160px;right:5%;bottom:10%"></i></div>
  <div class="in">
   <div class="k a">Consumidor · porção</div>
-  <h2 class="t" data-kin>O que cresce é a porção: o pequeno vende mais que o grande.</h2>
+  <h2 class="t" data-kin>O que cresce é a porção: o pequeno ganha espaço do grande.</h2>
   <div class="g" style="grid-template-columns:1fr 1fr;margin-top:30px;gap:60px">
    <div class="a" style="--d:.6s;border-top:8px solid var(--red);padding-top:18px">
     <div style="display:flex;align-items:center;gap:20px"><i data-ic="slice" data-s="110"></i><span class="big cu" data-to="4.2" data-dec="1" data-pre="+" data-suf="%" style="font-size:190px;color:var(--red)">+4,2%</span></div>
-    <p class="sub" style="font-size:28px;margin-top:8px">de participação para o bolo de 40 g</p>
+    <p class="sub" style="font-size:28px;margin-top:8px">de participação do bolo de 40 g no 1º semestre de 2026</p>
    </div>
    <div class="a" style="--d:1s;border-top:8px solid var(--navy);padding-top:18px">
     <div style="display:flex;align-items:center;gap:20px"><i data-ic="lupa" data-s="110"></i><span class="big cu" data-to="41" data-pre="+" data-suf="%" style="font-size:190px">+41%</span></div>
-    <p class="sub" style="font-size:28px;margin-top:8px">de busca por “bolo pronto” em 12 meses</p>
+    <p class="sub" style="font-size:28px;margin-top:8px">de busca por “bolo pronto”: 13 últimas semanas contra as 13 primeiras</p>
    </div>
   </div>
   <p class="sub a" style="--d:1.5s;margin-top:34px;font-size:24px">Busca não é venda: é sinal de interesse.</p>
  </div>
- <p class="src">Fontes: Abimapi/NielsenIQ, 1º semestre de 2026; Google Trends, consulta de 10/10/2026 (índice de busca).</p>
+ <p class="src">Fontes: Abimapi/NielsenIQ via Mercado &amp; Consumo, 25/08/2026 (+4,2% como publicado pela fonte); Google Trends, consulta de 5 termos, 10/10/2026 (índice de busca, não é venda).</p>
 </section>
 
 <!-- 11 TENDÊNCIAS -->
@@ -439,13 +438,13 @@ body.mob .nd b{font-size:34px}
  <div class="in" style="padding-top:118px">
   <div class="k a">Oportunidade · a marca já é procurada</div>
   <h2 class="t" data-kin style="font-size:52px;max-width:1400px">A Panco já é mais buscada que a Pullman em SP, RJ e PR, e dispara no Natal.</h2>
-  <p class="sub a" style="--d:.5s;margin-top:10px;font-size:24px">No diagnóstico: média 47 contra 33 da Pullman, com pico de 62 em dezembro.</p>
+  <p class="sub a" style="--d:.5s;margin-top:10px;font-size:24px">Média de 47 contra 33 da Pullman, com pico de 62 em 14/12/2025.</p>
   <div class="g" style="grid-template-columns:1.55fr 1fr;margin-top:6px;gap:34px">
    <div id="ch13" class="zsvg" data-zoom data-g="gr" data-cap="Buscas por Panco e Pullman nos últimos 12 meses (Google Trends)"></div>
    <div id="ch13b" class="zsvg" data-zoom data-g="gr" data-cap="Peso nas buscas da categoria dentro de cada estado (não compara estados)"></div>
   </div>
  </div>
- <p class="src">Fonte: Google Trends, Brasil e por estado, consulta de 10/10/2026. Índice relativo, não mede vendas. Linha: consulta só com Panco e Pullman (pico = 100). Barras: peso dentro de cada estado; compare só barras do mesmo estado. “Pullman” pode incluir buscas por pessoas com esse nome.</p>
+ <p class="src">Fonte: Google Trends, consulta de 5 termos (pão de forma, bisnaguinha, bolo pronto, Panco, Pullman), Brasil e por estado, 05/10/2025 a 04/10/2026, consultada em 10/10/2026. Índice relativo: 100 é o pico do pão de forma na mesma consulta; não mede vendas. Barras: peso dentro de cada estado, compare só barras do mesmo estado. “Pullman” pode incluir buscas por pessoas com esse nome.</p>
 </section>
 
 <!-- 14 INSIGHT -->
@@ -497,25 +496,23 @@ body.mob .nd b{font-size:34px}
   <p class="sub a" style="--d:.4s;margin-top:8px;font-size:23px">Ponta de Natal, Bisnaguinha e bolinho no caixa abrem o caminho.</p>
   <div id="ch16" class="zsvg" data-zoom data-g="gr" data-cap="Matriz impacto x esforço das 7 oportunidades (julgamento 75 LAB, a validar)" style="margin-top:0"></div>
  </div>
- <p class="src">Notas de impacto e esforço: julgamento 75 LAB, a validar com a Panco (Hipótese).</p>
+ <p class="src">Notas de impacto e esforço: julgamento 75 LAB, a validar com a Panco (Hipótese). Nutrella: marca que era da Bimbo e foi vendida por exigência do Cade (leilão em 24/07/2026; comprador em sigilo até a aprovação do Cade).</p>
 </section>
 
 <!-- 17 REVEAL -->
 <section class="s slide red" data-th="red" data-tr="zoom" data-ch="Solução" aria-label="Reveal da Ponta de Natal Panco">
- <div class="kvimg abs" style="position:absolute;inset:0;z-index:1">
-  <img data-zoom data-g="kv" data-cap="Ponta de Natal Panco, 900 x 1.900 x 450 mm, em supermercado regional de São Paulo (mockup criado por IA)" src="assets/06-oficina-1791670272482-ponta.jpg" alt="Mockup da Ponta de Natal Panco no corredor de um supermercado, com panetones e bisnaguinhas" style="object-position:50% 40%">
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(216,0,0,.95) 0,rgba(216,0,0,.85) 34%,rgba(216,0,0,0) 62%)"></div>
+ <div class="kvimg abs" style="position:absolute;top:0;bottom:0;right:0;left:560px;z-index:1">
+  <img data-zoom data-g="kv" data-cap="Ponta de Natal Panco, 900 x 1.900 x 450 mm, em supermercado regional de São Paulo (mockup criado por IA)" src="assets/06-oficina-1791671981587-ponta3.jpg" alt="Mockup da Ponta de Natal Panco no corredor de um supermercado, só com caixas de panetone Trufado 550 g e mini Frutas 80 g" style="object-position:38% 50%">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(216,0,0,1) 0,rgba(216,0,0,0) 26%)"></div>
  </div>
  <div class="curtain cl"></div><div class="curtain cr2"></div>
- <div class="in" style="z-index:5;justify-content:center;padding-right:900px">
+ <div class="in" style="z-index:5;justify-content:center;padding-right:1000px">
   <div class="k a" style="--d:2.2s">Reveal · oportunidade nº 1</div>
   <h2 class="t a" style="--d:2.4s;font-size:60px">A ponta que já está em aprovação vira a Ponta de Natal Panco.</h2>
   <p class="sub a" style="--d:2.8s">Panetone 550 g para a mesa, mini 80 g para o impulso, em supermercado regional de SP.</p>
+  <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:30px"><div class="tag a" style="--d:3.2s;position:static">Canal: supermercado regional de SP</div><div class="tag a" style="--d:3.5s;position:static">Peça: 900 x 1.900 x 450 mm</div><div class="tag a" style="--d:3.8s;position:static">Produto: panetone 550 g e mini 80 g</div></div>
  </div>
- <div class="tag a" style="--d:3.2s;left:1020px;top:170px">Canal: supermercado regional de SP</div>
- <div class="tag a" style="--d:3.5s;left:1090px;top:520px">Peça: 900 x 1.900 x 450 mm</div>
- <div class="tag a" style="--d:3.8s;left:880px;top:330px">Produto: panetone 550 g e mini 80 g</div>
- <p class="src" style="z-index:7;max-width:800px">Imagem ilustrativa criada por IA a partir das embalagens reais (fotos de loja online de terceiro); rótulos recriados, não são arte final. Clique para ampliar.</p>
+ <p class="src" style="z-index:7;max-width:620px">Na ponta, só panetone Panco. Imagem ilustrativa criada por IA a partir das embalagens reais (fotos de loja online de terceiro); rótulos recriados, não são arte final. Clique para ampliar.</p>
 </section>
 
 <!-- 18 MINI -->
@@ -551,7 +548,7 @@ body.mob .nd b{font-size:34px}
   <div class="k a">Oportunidade nº 2 · Bisnaguinha Panco</div>
   <h2 class="t" data-kin style="font-size:54px;max-width:1350px">A Bisnaguinha Panco ganha pelo valor por porção, na ilha do café da manhã.</h2>
   <div class="g" style="grid-template-columns:1.25fr .75fr;margin-top:20px;gap:36px;align-items:start">
-   <div class="a z" style="--d:.5s"><img data-zoom data-g="kv" data-cap="Ilha de calendário: Bisnaguinha Panco o ano todo, panetone no Natal (mockup criado por IA)" src="assets/09-oficina-1791670273215-ilha.jpg" alt="Mockup de ilha de supermercado com bisnaguinhas e panetones Panco" style="border-radius:14px;width:100%;height:470px;object-fit:cover" loading="lazy"></div>
+   <div class="a z" style="--d:.5s"><img data-zoom data-g="kv" data-cap="Ilha de café da manhã com só Bisnaguinha Panco, em supermercado regional de SP (mockup criado por IA)" src="assets/09-oficina-1791671982351-ilha3.jpg" alt="Mockup de ilha de supermercado só com pacotes de Bisnaguinha Panco" style="border-radius:14px;width:100%;height:490px;object-fit:cover;object-position:50% 0%" loading="lazy"></div>
    <div>
     <div class="zsvg a" data-zoom data-g="gr" data-cap="Planta ilustrativa da ilha (medidas a definir)" style="--d:1s;background:var(--cream);border-radius:14px;padding:12px" id="ch20"></div>
     <p class="sub a" style="--d:1.4s;font-size:22px;margin-top:14px">Contra a Seven Boys, o argumento é quanto custa cada café, não cada pacote.</p>
@@ -806,12 +803,12 @@ s.innerHTML=o;})();
 /* ---- gráfico 5 ---- */
 (function(){const e=$('#ch5');if(!e)return;const z=170,k=38;
 const bars=[[215,1.1,'v'],[395,-3.9,'q'],[815,3.5,'v'],[995,-3.4,'q']];
-let o='<svg class="fs" viewBox="0 0 1400 440" style="width:1400px" role="img" aria-label="Pão: valor +1,1% e volume -3,9%. Panetone: valor +3,5% e volume -3,4%">';
+let o='<svg class="fs" viewBox="0 0 1400 380" style="width:1400px" role="img" aria-label="Pão: valor +1,1% e volume -3,9%. Panetone: valor +3,5% e volume -3,4%">';
 o+='<line x1="60" x2="1340" y1="'+z+'" y2="'+z+'" stroke="#20306A" stroke-width="2"/>';
 bars.forEach((b,i)=>{const hgt=Math.abs(b[1])*k;const pos=b[1]>0;const col=b[2]==='v'?'#20306A':'#D80000';
 o+='<rect class="'+(pos?'bar':'barn')+'" style="--d:'+(.5+i*.25)+'s" x="'+b[0]+'" y="'+(pos?z-hgt:z)+'" width="150" height="'+hgt+'" fill="'+col+'" rx="6"/>';
 o+='<g class="a f" style="--d:'+(1.1+i*.25)+'s">'+T(b[0]+75,pos?z-hgt-12:z+hgt+30,(pos?'+':'-')+fmtN(Math.abs(b[1]),1)+'%',{a:'middle',f:'Alegreya Sans',w:900,s:42,c:col})+'</g>';});
-o+=T(380,428,'Pão industrializado · 1º sem. 2026',{a:'middle',s:23,w:700})+T(980,428,'Panetone · safra 2025/26',{a:'middle',s:23,w:700});
+o+=T(395,360,'Pão industrializado · 1º sem. 2026',{a:'middle',s:23,w:700})+T(995,360,'Panetone · safra 2025/26',{a:'middle',s:23,w:700});
 o+='<rect x="1090" y="14" width="22" height="22" fill="#20306A" rx="4"/>'+T(1122,32,'Valor (R$)',{s:20})+'<rect x="1090" y="48" width="22" height="22" fill="#D80000" rx="4"/>'+T(1122,66,'Volume (quilos)',{s:20});
 o+='</svg>';e.innerHTML=o;})();
 
@@ -845,8 +842,8 @@ e.innerHTML=o+'</div>';})();
 
 /* ---- linhas de busca ---- */
 (function(){const e=$('#ch13');if(!e)return;
-const P=[74,63,77,69,78,81,71,68,94,88,100,80,63,79,77,84,84,69,70,74,70,77,74,73,87,89,70,77,75,74,69,72,72,80,71,70,63,60,67,66,83,85,74,73,79,77,78,73,74,81,81,77,66];
-const L=[56,55,58,62,55,60,60,61,49,49,51,51,54,51,55,54,52,59,50,53,56,54,56,71,56,45,47,47,47,49,46,57,55,53,50,49,57,56,49,48,51,56,50,49,60,57,55,54,49,56,52,45,40];
+const P=[46, 39, 48, 43, 48, 50, 44, 43, 58, 55, 62, 50, 40, 49, 48, 52, 52, 43, 44, 46, 44, 48, 46, 46, 54, 55, 43, 48, 47, 46, 43, 45, 45, 50, 44, 44, 39, 37, 42, 41, 52, 53, 46, 45, 49, 48, 49, 45, 46, 50, 50, 49, 42];
+const L=[35, 34, 36, 38, 34, 37, 38, 38, 30, 31, 32, 32, 34, 32, 34, 33, 32, 36, 31, 33, 35, 33, 35, 44, 35, 28, 29, 29, 29, 31, 28, 35, 34, 33, 31, 30, 35, 35, 30, 30, 32, 35, 31, 30, 37, 35, 34, 33, 31, 35, 33, 28, 26];
 const mo={0:'out/25',4:'nov',9:'dez',13:'jan',17:'fev',21:'mar',26:'abr',30:'mai',35:'jun',39:'jul',43:'ago',48:'set',52:'out/26'};
 const x=i=>70+i*(740/52),y=v=>330-v*3.1;
 const path=a=>a.map((v,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)).join('');
@@ -855,9 +852,9 @@ let o='<svg class="fs" viewBox="0 0 880 400" style="width:880px" role="img" aria
 Object.keys(mo).forEach(i=>{o+=T(x(+i),372,mo[i],{a:'middle',s:15,c:'#6b7090'});});
 o+='<path class="draw" pathLength="1" style="--d:.6s" d="'+path(L)+'" fill="none" stroke="#9aa0b8" stroke-width="4" stroke-linejoin="round"/>';
 o+='<path class="draw" pathLength="1" style="--d:.9s;--to:0" d="'+path(P)+'" fill="none" stroke="#D80000" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>';
-o+='<g class="pop" style="--d:2.2s"><circle cx="'+x(10)+'" cy="'+y(100)+'" r="11" fill="#FBD72D" stroke="#D80000" stroke-width="4"/></g><g class="a" style="--d:2.4s">'+T(x(10)+18,y(100)+6,'14/12/2025: pico da Panco',{s:19,w:700,c:'#D80000'})+'</g>';
-o+='<g class="a" style="--d:2.2s">'+T(815,y(P[52])-8,'Panco',{s:20,w:800,c:'#D80000',a:'end'})+T(815,y(L[52])+22,'Pullman',{s:20,w:700,c:'#6b7090',a:'end'})+'</g>';
-o+='</svg>';e.innerHTML=o;
+o+='<g class="pop" style="--d:2.2s"><circle cx="'+x(10)+'" cy="'+y(62)+'" r="11" fill="#FBD72D" stroke="#D80000" stroke-width="4"/></g><g class="a" style="--d:2.4s">'+T(x(10)+18,y(62)-14,'14/12/2025: pico da Panco, 62',{s:19,w:700,c:'#D80000'})+'</g>';
+o+='<g class="a" style="--d:2.2s">'+T(815,y(P[52])-42,'Panco',{s:20,w:800,c:'#D80000',a:'end'})+T(815,y(L[52])+22,'Pullman',{s:20,w:700,c:'#6b7090',a:'end'})+'</g>';
+o+=T(70,396,'Índice de busca: 100 = pico do pão de forma na mesma consulta de 5 termos',{s:15,c:'#6b7090'});o+='</svg>';e.innerHTML=o;
 const b=$('#ch13b');const D=[['SP',38,20],['RJ',31,9],['PR',25,18],['SC',15,22],['RS',7,24]];
 let q='<svg class="fs" viewBox="0 0 560 400" style="width:560px" role="img" aria-label="Peso nas buscas dentro de cada estado: Panco à frente em SP, RJ e PR; Pullman em SC e RS">';
 q+='<rect x="20" y="8" width="20" height="20" fill="#D80000" rx="4"/>'+T(48,25,'Panco',{s:18})+'<rect x="130" y="8" width="20" height="20" fill="#9aa0b8" rx="4"/>'+T(158,25,'Pullman',{s:18});
@@ -867,7 +864,7 @@ q+=T(14,392,'Compare só barras do mesmo estado.',{s:16,w:700,c:'#6b7090'})+'</s
 /* ---- matriz ---- */
 (function(){const e=$('#ch16');if(!e)return;
 const X=v=>190+(v-1)*150,Y=v=>330-(v-1)*68;
-const P=[[1,'Ponta de Natal Panco',1,4],[2,'Bisnaguinha: valor por porção',3,5],[3,'Bolinho no caixa',1,3],[4,'Bloco vermelho do pão de forma',4,5],[5,'Frescor que se vê',2,3],[6,'Integral na janela da Nutrella',2,3],[7,'Pão no churrasco',1,2]];
+const P=[[1,'Ponta de Natal Panco',1,4],[2,'Bisnaguinha: valor por porção',3,5],[3,'Bolinho no caixa',1,3],[4,'Bloco vermelho do pão de forma',4,5],[5,'Frescor que se vê',2,3],[6,'Integral na saída da Nutrella',2,3],[7,'Pão no churrasco',1,2]];
 let o='<svg class="fs" viewBox="0 0 1420 400" style="width:1420px" role="img" aria-label="Matriz impacto por esforço das sete oportunidades">';
 o+='<rect x="110" y="40" width="190" height="150" rx="10" fill="#FBD72D" fill-opacity=".14"/>';
 for(let v=1;v<=5;v++){o+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="40" y2="350" stroke="#fff" stroke-opacity=".15" stroke-width="2"/><line x1="130" x2="810" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="#fff" stroke-opacity=".15" stroke-width="2"/>'+T(X(v),378,String(v),{a:'middle',s:17,c:'#fff'})+T(106,Y(v)+6,String(v),{a:'end',s:17,c:'#fff'});}
@@ -907,9 +904,9 @@ o+='</svg>';e.innerHTML=o;})();
 
 /* ---- planta da ilha ---- */
 (function(){const e=$('#ch20');if(!e)return;
-let o='<svg class="fs" viewBox="0 0 420 270" style="width:100%" role="img" aria-label="Planta ilustrativa da ilha: bisnaguinha à esquerda e panetone à direita">';
+let o='<svg class="fs" viewBox="0 0 420 270" style="width:100%" role="img" aria-label="Planta ilustrativa da ilha: Bisnaguinha Originais à esquerda, Integral e Souadinho à direita">';
 o+='<rect class="barx" style="--d:1.2s" x="70" y="50" width="280" height="150" rx="10" fill="#FBD72D"/><rect x="70" y="50" width="190" height="150" rx="10" fill="#D80000"/><rect x="260" y="50" width="90" height="150" fill="#20306A"/>';
-o+=T(165,120,'Bisnaguinha',{a:'middle',f:'Alegreya Sans',w:900,s:26,c:'#fff'})+T(165,148,'o ano todo',{a:'middle',s:16,c:'#fff'})+T(305,120,'Panetone',{a:'middle',f:'Alegreya Sans',w:900,s:22,c:'#fff'})+T(305,146,'Natal',{a:'middle',s:16,c:'#fff'});
+o+=T(165,120,'Bisnaguinha',{a:'middle',f:'Alegreya Sans',w:900,s:26,c:'#fff'})+T(165,148,'Originais',{a:'middle',s:16,c:'#fff'})+T(305,116,'Integral',{a:'middle',f:'Alegreya Sans',w:900,s:22,c:'#fff'})+T(305,140,'Souadinho',{a:'middle',s:14,c:'#fff'});
 o+='<path class="draw" pathLength="1" style="--d:1.6s" d="M40 225H380M40 25H380" stroke="#20306A" stroke-width="3" fill="none" stroke-dasharray=".03 .03"/>';
 o+=T(210,255,'circulação do shopper · medidas a definir',{a:'middle',s:16,w:700})+T(210,18,'planta ilustrativa (vista de cima)',{a:'middle',s:16,w:700});
 o+='</svg>';e.innerHTML=o;})();
@@ -949,9 +946,9 @@ let o='<svg class="fs" viewBox="0 0 1420 500" style="width:1420px" role="img" ar
 o+='<rect class="a f" style="--d:1.5s" x="'+X(mk(14,12))+'" y="76" width="'+(X(mk(25,12))-X(mk(14,12)))+'" height="370" fill="#FBD72D" fill-opacity=".16"/>';
 F.forEach((f,i)=>{const yy=96+i*50;const x1=X(f[2]),x2=X(new Date(f[3].getTime()+864e5));
 o+=T(20,yy+20,f[0],{s:20,w:700,c:'#fff'})+T(20,yy+40,f[1],{s:15,c:'#cfd3ea'});
-o+='<rect class="barx" style="--d:'+(.5+i*.25)+'s" x="'+x1+'" y="'+yy+'" width="'+(x2-x1)+'" height="34" rx="8" fill="'+f[4]+'"/>'+'<g class="a" style="--d:'+(.9+i*.25)+'s">'+(x2+180>1420?T(x1-10,yy+25,f[5],{a:'end',s:16,w:700,c:'#fff'}):T(x2+10,yy+25,f[5],{s:16,w:700,c:'#fff'}))+'</g>';});
+o+='<rect class="barx" style="--d:'+(.5+i*.25)+'s" x="'+x1+'" y="'+yy+'" width="'+(x2-x1)+'" height="34" rx="8" fill="'+f[4]+'"/>'+'<g class="a" style="--d:'+(.9+i*.25)+'s">'+T(x2+10,yy+25,f[5],{s:16,w:700,c:'#fff'})+'</g>';});
 const M=[[mk(30,10),'Decisão 30/10',0],[mk(27,11),'Relatório One Shot 27/11',1],[mk(11,12),'Leitura parcial 11/12',0],[mk(25,12),'Natal 25/12',1]];
-M.forEach((m,i)=>{const x=X(m[0])+ (1050/D)/2;o+='<line class="draw" pathLength="1" style="--d:'+(1.8+i*.2)+'s" x1="'+x+'" x2="'+x+'" y1="'+(m[2]?44:30)+'" y2="450" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="1 1"/><g class="pop" style="--d:'+(1.8+i*.2)+'s"><path d="M'+x+' '+(m[2]?40:26)+'l11 11 -11 11 -11 -11z" fill="#D80000" stroke="#fff" stroke-width="3"/>'+(i===3?'<circle cx="'+x+'" cy="'+(m[2]?51:37)+'" r="14" fill="none" stroke="#FBD72D" stroke-width="3"><animate attributeName="r" values="14;30;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/></circle>':'')+'</g><g class="a" style="--d:'+(2+i*.2)+'s">'+T([x,x-10,x+10,x+18][i],[12,12,12,36][i],m[1],{a:['middle','end','start','start'][i],s:17,w:800,c:'#FBD72D'})+'</g>';});
+M.forEach((m,i)=>{const x=X(m[0])+ (1050/D)/2;o+='<line class="draw" pathLength="1" style="--d:'+(1.8+i*.2)+'s" x1="'+x+'" x2="'+x+'" y1="'+(m[2]?44:30)+'" y2="450" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="1 1"/><g class="pop" style="--d:'+(1.8+i*.2)+'s"><path d="M'+x+' '+(m[2]?40:26)+'l11 11 -11 11 -11 -11z" fill="#D80000" stroke="#fff" stroke-width="3"/>'+(i===3?'<circle cx="'+x+'" cy="'+(m[2]?51:37)+'" r="14" fill="none" stroke="#FBD72D" stroke-width="3"><animate attributeName="r" values="14;30;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/></circle>':'')+'</g><g class="a" style="--d:'+(2+i*.2)+'s">'+T(x,m[2]?24:12,m[1],{a:'middle',s:17,w:800,c:'#FBD72D'})+'</g>';});
 o+=T(X(mk(14,12))+(X(mk(25,12))-X(mk(14,12)))/2,470,'pico de Natal: 14/12 a 24/12',{a:'middle',s:17,w:700,c:'#FBD72D'});
 o+='</svg>';e.innerHTML=o;})();
 
@@ -974,7 +971,7 @@ $$('[data-type]').forEach(el=>{const t=el.textContent.trim().split(/\s+/);el.set
 
 /* ---- motor ---- */
 const stage=$('#stage'),slides=$$('.s'),N=slides.length;let cur=0,started=false,mob=false,lock=0;const flat=!!navigator.webdriver||/[?&]flat/.test(location.search);
-function fit(){if(flat){document.body.classList.add('flat');return}mob=Math.min(innerWidth,screen.width||innerWidth,document.documentElement.clientWidth||innerWidth)<860;document.body.classList.toggle('mob',mob);if(!mob){const k=Math.min(innerWidth/1600,innerHeight/900);stage.style.transform='translate(-50%,-50%) scale('+k+')'}else stage.style.transform=''}
+function fit(){if(flat){document.body.classList.add('flat');return}mob=innerWidth<860;document.body.classList.toggle('mob',mob);if(!mob){const k=Math.min(innerWidth/1600,innerHeight/900);stage.style.transform='translate(-50%,-50%) scale('+k+')'}else stage.style.transform=''}
 function cu(el,delay){const to=+el.dataset.to,dec=+(el.dataset.dec||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'';const f=v=>pre+fmtN(v,dec)+suf;
  if(reduce||mob||flat){el.textContent=f(to);return}
  el.textContent=f(0);const t0=performance.now()+delay*1000,dur=+(el.dataset.dur||1700);
