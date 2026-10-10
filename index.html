@@ -969,7 +969,7 @@ var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){retu
 function fillDet(on){$$('.pil').forEach(function(p){var d=$('.det',p);if(!on){if(d)d.remove();return}if(d||!p.dataset.a)return;d=document.createElement('span');d.className='det';var b1=document.createElement('b');b1.textContent='Ação: ';var b2=document.createElement('b');b2.textContent=(p.dataset.ml||'Meta (Hipótese)')+': ';d.appendChild(b1);d.appendChild(document.createTextNode(p.dataset.a));d.appendChild(document.createElement('br'));d.appendChild(b2);d.appendChild(document.createTextNode(p.dataset.m));p.appendChild(d)})}
 var stage=$('#stage'),S=$$('.slide'),N=S.length,cur=-1,lock=0,mob=false,wasMob=false;
 function fit(){
-  mob=window.innerWidth<860;
+  mob=Math.min(window.innerWidth,screen.width||window.innerWidth,document.documentElement.clientWidth||window.innerWidth)<860;
   document.body.classList.toggle('mob',mob);
   if(mob){wasMob=true;fillDet(true);stage.style.transform='none';S.forEach(function(s){s.classList.add('ativa')});stage.classList.remove('nohead');stage.dataset.t='l';$$('.cnt').forEach(function(e){e.textContent=fmt(e,+e.dataset.to)});return}
   if(wasMob){fillDet(false);S.forEach(function(s){s.classList.remove('ativa')});cur=-1;wasMob=false}
